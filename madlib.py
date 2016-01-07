@@ -15,3 +15,15 @@ action = input ("Please tell me an action: ")
 madlib = madlib + action + "really hard. Then we had to "
 
 action2 = input ("Please tell me another action: ")
+
+madlib = madlib + action2 + "in order to make it there in time to catch the plane. Once we made it on the plane, the flight attendant asked if we would sing "
+
+song = input ("Please tell me your favorite song: ")
+
+madlib = madlib + song + "in order to get the plane moving.  After, we flew to our destination and jumped in a cab. The cab driver asked if we would "
+
+dance = input ("Please tell me your favorite type of dance: ")
+
+madlib = madlib + dance + "in order for him to drive us to our desination. Here, we found what we were looking for."
+
+print(madlib)
