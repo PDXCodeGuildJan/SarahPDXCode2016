@@ -13,12 +13,15 @@ def custom_die(low,high):
 
 	#Determine if max or min 
 	if roll == low:
+	#if the roll is low, then print below 
 		print ("{r} Critical Fail!".format(roll))
 		#this is how to use the .format
 	elif roll == high:
+	#else if the roll is high, then print below 
 		print (roll, " Critical Hit!")
 		#this is the original way to use the comma for string instead of str()
 	else: 
+	#else if it doesn't match the top two then print the rest of the roll 
 		print (roll)
 
 def main():
