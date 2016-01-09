@@ -2,37 +2,39 @@
 #gracefully. Handle inputs without case-sensitivity, add some traps, output the path taken at the finish.  
 
 
+#The first step to any py program is to define the main: 
 def main():
+	
 	#Welcome user to the program 
-
 	print("Welcome to the the Dream Maze! You woke up this morning and thought it was just like every other day. But instead," 
 	"you found yourself standing in a desert and you need to find your way home. Help navigate yourself back to to your bed!") 
-	
-	
 	#Ask the user where they would like to go
 	entree = input("You see magical doors to the left and to the right, which door do you dare take?")
 
+	
 	if entree == "left":
-		#call the lake function
+		#if they chose the left door, call the lake function
 		lake()
  
 	if entree == "right": 
-		#call the mountain function 
+		#if they choose the right door, call the mountain function 
 		mountain()
 		
-
+#this is the lake function 
 def lake():
+	#Tell them what happens when they choose the lake function 
 	print("You walked straight into a lake! You must turn around quickly before the lake monster eats you!")
 	entree = input("Do you want to turn around? (yes/no)")	
 	
 	if entree == "yes":
 		main()
 	elif entree == "no":
+		#tell them what happens and end the game by not giving it any more functions. 
 		print("Oh no! The lake monster has eaten you and you are now dead. Good Day.")
 
 def mountain():
-	print("You have found yourself standing in glorious mountains and need to pick the next door before it starts snowing.")
-	entree = input("You can go up or down. Which way to you choose?")
+	print("You have found yourself standing on a glorious mountain and need to jump before it starts snowing.")
+	entree = input("You jump up or jump down. Which way to you choose?")
 
 	if entree == "up":
 		ocean()
