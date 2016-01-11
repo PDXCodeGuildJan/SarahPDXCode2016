@@ -29,6 +29,7 @@ def main():
 	print("Welcome to Die Roller. Enter q to exit.")
 
 	entree = ""
+	#this is for the while loop
 
 	#Wrap the core logic of the function in a while loop, so that it keeps asking to roll, until we exist.
 	while entree !="q": 
