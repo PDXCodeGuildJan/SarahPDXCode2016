@@ -27,7 +27,7 @@ def selection_sort(unsorted_list):
 		current_index = first_number
 		lowest_index = first_number
 
-		while current_index < len(unsorted_list[first_number:]):
+		while current_index < len(unsorted_list):
 		#while the index is less than the length of the the current index 
 			if unsorted_list[lowest_index] > unsorted_list[current_index]:
 			#if the value in lowest index of the unsorted list is greater than the value of the current index in the unsorted list:
@@ -72,5 +72,43 @@ def selection_sort(unsorted_list):
 	
 sorted_list = selection_sort(unsorted_list)
 print(sorted_list)
+
+
+"""
+
+Bubble Sort 
+
+1) Make a list 
+
+#Find the lenth of the list
+
+2) Compare the first two index's values and determine if the first index's value is greater than the second index's value. 
+If it isn't greater, then swap the two values. 
+
+3) Repeat the process for the length of the list.
+
+4) Once the list runs through the end of the length, move the end point in by one. 
+
+5) Repeat process.
+
+
+Find the first index's value is the first index greater than the value in the second index 
+
+
+while current_index < len(unsowhile current_index < len(unsorted_list[first_number:])
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
