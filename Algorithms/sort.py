@@ -108,8 +108,8 @@ def bubble_sort(unsorted_list):
 
     return unsorted_list
 
-
-main ()
+if __name__ == "__main__":
+    main ()
 
 
 
