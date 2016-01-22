@@ -14,6 +14,10 @@ phonebook = {}
 #1 give it information 
 def main():
 	"""The main drivers function of our Phonebook."""
+
+	#load any existing data into phonebook by calling load_phonebook function 
+	load_phonebook()
+	#print("Phonebook after load", phonebook) - debugging print statement 
 	
 	print("\n\tWelcome to our super Fancy Phonebook!")
 
@@ -83,13 +87,17 @@ def add_contact(name, phonenumber):
 	phonebook [scrubbed_name] = formated_num
 	print("\nNew Contact:", scrubbed_name, "was added with number", formated_num)
 	
-
+	#Save updated phonebook 
+	save_phonebook()
 
 def delete_contact(name):
 	""" removes the given contact from the Phonebook"""
 	if name in phonebook:
 		del phonebook[name]
 		print(name, "was deleted from the Phonebook.\n")
+
+		#save updated phonebook 
+		save_phonebook
 
 	else:
 		print("That contact does not exist.\n")
@@ -125,7 +133,53 @@ def print_phonebook():
 	for item in phonebook:
 		print(item, "has phone number", phonebook[item])
 
+def save_phonebook():
+	"""Save the contents of this phonebook to a file"""
+
+	#load data from a file into phonebook
+	open_file = open("phonebook.txt", "w")
+	#we need to open the file and input data into it, but the write function needs to be converted to a string 
+	open_file.write(str(phonebook))
+	open_file.close()
+
+def load_phonebook():
+	"""Load the phonebook data from the save file"""
+
+	#this gives the new phone book access to the global phonebook to change the memory access point 
+	global phonebook
+
+	#Open the file in write mode first, to create it if it doesnt already exist 
+	load_file = open("phonebook.txt", "a")
+	load_file.close()
+
+	#make a variable to open the phonebook file in read mode 
+	load_file = open("phonebook.txt", "r")
+	#this will take all of the data in that file and put it into phonebook_data 
+	phonebook_data = load_file.read()
+	load_file.close()
+
+	#print("String from the file", phonebook_data) - debugging print statement 
+
+	#if there is phonebook data , then load it into the dictonary 
+	if phonebook_data:
+		#Convert from string back to dictonary 
+		#cast it to a dictonary - eval takes a string and turns it into a data function that makes the most sense. Since 
+		#looks like a dictonary, it will turn it into a dictonary 
+		phonebook = eval(phonebook_data)
+
+	#print("Data in dictonary:", phonebook) - debugging print statement 
 
 
 if __name__ == '__main__':
 	main()
+
+
+
+
+
+
+
+
+
+
+
