@@ -1,34 +1,28 @@
 """
-Creates a translation program to change english messages into morse code
-or to change morse codes messages into english
+Creates a translation program to change english into morse code
+or to change morse code into english.
 
 """
 __author__="Alexis Bird, Gabriel Key, and Sarah Fellows"
 
-# ask if user wants to send or read a message
-# if send, receive text for message, translate text to morse code, and write to a file/display
-# if read, read morse code file, translate message, and dipslay / write to file
-
-
 import re
 from morse import morse
 
-
 def main():
     """The main driver function to this Morse Code translator"""
-    ######write this last######
-    ### create input to receive message that is used in def write_code
 
-    eng_message = input("What is the message you would like to send?")
-    file_name2 = input("What would you like to name the file?")
-    write_code(eng_message,file_name2)
+    # create input to receive message that is used in def write_code
+    eng_message = input("What is the message you would like to send? ")
+    #create input to ask what file they would like translated
+    created_file = input("What would you like to name the file? ")
+    write_code(eng_message,created_file)
 
     #Main should be the only function that prints, all other functions should not
-    morse_file = input("What file would you like to translate?")
+    morse_file = input("What file would you like to translate? ")
     print(read_code(morse_file))
 
 def read_code(morse_file):
-    """ Accepts morse file name and returns english translation"""
+    """ Accepts content in a string from specified morse file and returns English translation in a string"""
     # This creates a function that accepts a filename and
     # returns the English translation of the contents of the file.
     untranslated_code = open_message(morse_file)
@@ -50,40 +44,33 @@ def read_code(morse_file):
 
     return translated_code
 
-                    # concatinate each string
-
-def write_code(eng_message, file_name2):
-    """ Accepts english file and returns morse code and file name"""
+def write_code(eng_message, created_file):
+    """ Accepts english file in a string and returns morse code and file name"""
     # This accepts a message and returns the message in code, prints the code, saves the code to a file,
     # and tells the user the file location.
 
-    # accepts a message ---- done with signature def write_code(message, file_name2):
-
-    # loops through the message, converting each letter in message to morse code
-    # use a for loop: "for XXYY in  string:
-    #print(eng_message)
-
+    # creating an empty string to put the traslated messsage in
     trans_message = ""
 
+    #Loops through every character in the message
     for english_char in eng_message.upper():
+        #Take every space in english message and replace with seven spaces in the morse code translation
         if english_char == " ":
             trans_message += "       "
+        #Using the dictonary to make a new string using the morse values associated with each english character
         elif english_char in morse:
             trans_message += (morse[english_char] + "   ")
 
-    save_code(trans_message, file_name2)
+    save_code(trans_message, created_file)
 
     #     print (m_dict[XXYY] + "   ") ** don't forget to add spaces with "   " after each character
     #    will need an if statement to account for when spaces are met: if ltr = " ",
 
-
-
-
-def save_code(trans_message, file_name2):
+def save_code(trans_message, created_file):
     """saving the code to a seperate file"""
-    file_name2 = open(file_name2, "w")
-    file_name2.write(trans_message)
-    file_name2.close()
+    created_file = open(created_file, "w")
+    created_file.write(trans_message)
+    created_file.close()
 
 def open_message(file_name):
     """open a message file for translation to morse code"""
@@ -94,14 +81,6 @@ def open_message(file_name):
     open_file.close()
 
     return file_content
-
-# def print_results():
-#     # print_results will show each message and its morse code translation.
-#     # So, file would contain a message and its code for each action
-#     # THis will aslo require a new file that will contain each
-#     pass
-
-
 
 if __name__ == '__main__':
     main()
