@@ -24,14 +24,14 @@ def main():
     write_code(eng_message,file_name2)
 
     #Main should be the only function that prints, all other functions should not
-    morse_code = input("What morse code would you like to translate?")
-    read_code(morse_code)
+    morse_file = input("What file would you like to translate?")
+    print(read_code(morse_file))
 
-def read_code(morse_code):
+def read_code(morse_file):
     """ Accepts morse file name and returns english translation"""
     # This creates a function that accepts a filename and
     # returns the English translation of the contents of the file.
-    untranslated_code = ""
+    untranslated_code = open_message(morse_file)
     translated_code = ""
     # Split at 7 space block for list of words
     word_list = re.split("       ", untranslated_code) # 10 spaces rather
@@ -48,13 +48,9 @@ def read_code(morse_code):
 
         translated_code += " "
 
-
-
     return translated_code
 
                     # concatinate each string
-
-
 
 def write_code(eng_message, file_name2):
     """ Accepts english file and returns morse code and file name"""
@@ -65,7 +61,7 @@ def write_code(eng_message, file_name2):
 
     # loops through the message, converting each letter in message to morse code
     # use a for loop: "for XXYY in  string:
-    print(eng_message)
+    #print(eng_message)
 
     trans_message = ""
 
@@ -86,19 +82,24 @@ def write_code(eng_message, file_name2):
 def save_code(trans_message, file_name2):
     """saving the code to a seperate file"""
     file_name2 = open(file_name2, "w")
-
     file_name2.write(trans_message)
     file_name2.close()
 
-def open_message():
+def open_message(file_name):
     """open a message file for translation to morse code"""
-    
+    open_file = open(file_name, "r")
 
-def print_results():
-    # print_results will show each message and its morse code translation.
-    # So, file would contain a message and its code for each action
-    # THis will aslo require a new file that will contain each
-    pass
+    file_content = open_file.read()
+
+    open_file.close()
+
+    return file_content
+
+# def print_results():
+#     # print_results will show each message and its morse code translation.
+#     # So, file would contain a message and its code for each action
+#     # THis will aslo require a new file that will contain each
+#     pass
 
 
 
