@@ -45,7 +45,7 @@ def read_code(morse_file):
     return translated_code
 
 def write_code(eng_message, created_file):
-    """ Accepts english file in a string and returns morse code and file name"""
+    """ Accepts english message in a string and returns morse code saved to a file"""
     # This accepts a message and returns the message in code, prints the code, saves the code to a file,
     # and tells the user the file location.
 
@@ -73,7 +73,7 @@ def save_code(trans_message, created_file):
     created_file.close()
 
 def open_message(file_name):
-    """open a message file for translation to morse code"""
+    """open a message file for translation """"
     open_file = open(file_name, "r")
 
     file_content = open_file.read()
