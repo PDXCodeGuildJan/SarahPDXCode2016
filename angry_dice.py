@@ -6,15 +6,9 @@ __author__ = "Sarah Fellows"
 from random import randint 
 
 def main():
-	angry_instance = Angry_D() 
-	angry_instance.play_game()
-	angry_instance.roll_dice()
 
-	angry_instance.current_stage = 1 
-	angry_instance.die_1.index = 0
-	angry_instance.die_2.index = 1
-
-	angry_instance.win_round()
+	game_instance = Angry_D()
+	game_instance.play_game()
 
 class Angry_D(): 
 	""" Defines the variables and methods needed to play the game """
@@ -35,12 +29,31 @@ class Angry_D():
 		
 		self.get_player_name()
 
+		#This while loop needs to come after the welcome so it doesnt repeat itself.
+		while self.current_stage < 4:
+
+			#Roll their first die
+			self.roll_dice()
+
+			#Once the dice is rolled, check to see if it meets the check_angry standards 
+			if self.check_angry():
+				#this keeps it looping but pushes it to the top of the loop right now 
+				continue
+
+			#Check if player wins the round and advance round 
+			if self.win_round():
+				continue
+
+			self.player_choice()
+
+			self.evaluate_lock()
+
 
 	def get_player_name(self):
 		""" Asking for player name and updating it in the game. """
 
-		self.player_name = input("\nWhat is your name? ")
-		print("\nHi {0}! Roll your dice now!" .format(self.player_name))
+		self.player_name = input("\nPlease tell me your name... ")
+		print("\nHi {0}!! Lets Play! We will roll your dice now!" .format(self.player_name))
 
 
 	def roll_dice(self):
@@ -52,20 +65,33 @@ class Angry_D():
 		if not self.die_2.locked:
 			self.die_2.roll()
 
+		print("\n\n Here are the die you rolled:")
 		print(self.die_1)
 		print(self.die_2)	
 
 	def check_angry(self):
 		""" Defines method to check dice to see if both qualify as angry dice. """
 		
-		if self.die_1.value != 2:
-			return 
-		if self.die_2.value != 2: 
-			return
+		if self.die_1.index == 2 and self.die_2.index == 2:
+			self.current_stage = 1
+			print("You rolled to Angry Dice! You have been thrown back to the Round 1, you are not aiming for a 1 and a 2. Try not to be angry! ")
+			return True
 
-		# If the code gets to here, we know they are angry
-		self.current_stage = 1
-		print("You rolled to Angry Dice! You have been thrown back to the beginning. Try not to be angry! ")
+		else:
+			return False 
+
+
+		#This is another way to code it below: 
+		# if self.die_1.value != 2:
+		# 	return False
+		# if self.die_2.value != 2: 
+		# 	return False
+  
+		# # If the code gets to here, we know they are angry
+		# self.current_stage = 1
+		
+
+
 
 	def win_round(self):
 		""" Defines the method to check dice to see if both qualify as matching for winning round. """
@@ -91,6 +117,8 @@ class Angry_D():
 					else:
 						self.current_stage += 1
 						print("Congratulations! You have advanced to the next round!")
+						return True
+						#we need to know if we changed rounds or not 
 
 	def player_choice(self):
 		""" Defines the method to allow player to hold one dice, roll one dice or to roll both die again."""
@@ -106,11 +134,11 @@ class Angry_D():
 		while invalid_choice:
 			#this function needs to take in the already rolled dice, and give out what their choice
 			#if self.die_1.value
-			self.make_choice = input("Would you like to reroll the (T)op die or the (B)ottom die?")
+			entree = input("Would you like to reroll (a)ll of the die, just the (t)op die or just the (b)ottom die?")
 
 			#Choices:
 			# Reroll both
-			if entree.lower() == "r":
+			if entree.lower() == "a":
 				invalid_choice = False
 
 			#Lock/Hold die_1, roll die_2
@@ -132,6 +160,7 @@ class Angry_D():
 		#This function needs to take in the players choice and make sure it matched the round they on 
 
 		current_goal = self.stage_goal[self.current_stage]
+		print("current goal", current_goal)
 
 		# check both dice to see if they are locked, and if so, validly locked
 		for die in [self.die_1, self.die_2]:
@@ -170,13 +199,54 @@ class Die():
 		# __str__ built in function that overrides what Python was doing before, so it does what we tell it to instead 
 		# we never print inside of this string unless we are debugging 
 
-		temp = "["
-		temp += str(self.sides[self.index])
-		temp += "]"
+		#Below is the code what we did before making the dice pretty. 
+		# temp = "["
+		# temp += str(self.sides[self.index])
+		# temp += "]"
+
+		pretty_dice = [
 		
+		"""
++-------+
+|       |
+|   1   |
+|       |
++-------+""",
+
+"""
++-------+
+|     2 |
+|       |
+| 2     |
++-------+""",
+"""
++-------+
+| \   / |
+| ^   ^ |
+| ----- |
++-------+""",
+"""
++-------+
+| 4   4 |
+|       |
+| 4   4 |
++-------+""",
+"""
++-------+
+| 5   5 |
+|   5   |
+| 5   5 |
++-------+""",
+"""
++-------+
+| 6   6 |
+| 6   6 |
+| 6   6 |
++-------+"""
+]
+
 		# we want to return a string that looks like a die 
-		#return self.sides[self.value]
-		return temp
+		return pretty_dice[self.index]
 
 	def roll(self):
 		""" Updating the value of the rolled dice by choosing one of the sides"""
@@ -184,5 +254,42 @@ class Die():
 		# Because the length of the list is 6 but because the list starts at 0, we have to -1 to get the actual length 
 
 
+# def test_evaluate_lock():
+# 	angry_instance = Angry_D()
+# 	angry_instance.die_1.index = 0
+# 	angry_instance.die_2.index = 0
+# 	angry_instance.die_1.locked = True
+# 	angry_instance.die_2.locked = True
+# 	angry_instance.current_stage = 1
+# 	print("Die 1 is {}, die 2 is {}".format(angry_instance.die_1.locked, angry_instance.die_2.locked))
+# 	angry_instance.evaluate_lock()
+# 	print("Die 1 is {}, die 2 is {}".format(angry_instance.die_1.locked, angry_instance.die_2.locked))
+
+
+
+# def test_player_choice():
+# 	angry_instance = Angry_D()
+# 	angry_instance.die_1.index = 1
+# 	angry_instance.die_2.index = 1
+# 	print("Die 1 is {}, die 2 is {}".format(angry_instance.die_1.locked, angry_instance.die_2.locked))
+# 	angry_instance.player_choice()
+# 	print("Die 1 is {}, die 2 is {}".format(angry_instance.die_1.locked, angry_instance.die_2.locked))
+
+
+# def test_roll_and_play():
+# 	angry_instance = Angry_D() 
+# 	angry_instance.play_game()
+# 	angry_instance.roll_dice()
+
+
+# def test_advancing_rounds():
+# 	angry_instance = Angry_D() 
+# 	angry_instance.current_stage = 1 
+# 	angry_instance.die_1.index = 0
+# 	angry_instance.die_2.index = 1
+# 	angry_instance.win_round()
+
+
 if __name__ == '__main__':
 	main()
+
