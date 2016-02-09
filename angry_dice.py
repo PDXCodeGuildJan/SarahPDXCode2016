@@ -55,31 +55,27 @@ class Angry_D():
 		""" Asking for player name and updating it in the game. """
 
 		self.player_name = input("\nPlease tell me your name... ")
-		print("\nHi {0}! Lets Play! If you get too angry and need to exit, please hit (E)." .format(self.player_name))
+		print("\nHi {0}! Lets Play! If you get too angry and need to exit, please hit 'control and C' at the same time." .format(self.player_name))
 
 
 	def rules(self):
 
-		player_rule_answer = input("\nDo you know the rules? (yes/no)")
+		player_rule_answer = input("\n        Would you like to see the rules? Type 'Y' for yes or anything else for no.")
 
-		if player_rule_answer.lower() == "yes":
-
-		if player_rule_answer.lower() == "no":
-			print("\n~~~~~~~~~~~Here are the rules:~~~~~~~~~~~\n\n------The Battle------\n Players roll their dice at the **same time**,",
-				"\ntrying to get from 1 to 6 the fastest.\nThe first to do so wins! \n\n------The Details------\n",
+		if player_rule_answer.upper() == "Y":
+			print("\n~~~~~~~~~~~Here are the rules:~~~~~~~~~~~\n\n------The Battle------\nPlayers roll their dice at the **same time**,",
+				"trying to get from 1 to 6 the fastest.\nThe first to do so wins! \n\n------The Details------\n",
 				"Stage 1, then Stage 2, then Stage 3. When each Stage is complete, the player' must declare it out loud.", 
 				"Each player needs two Angry Dice. Players roll their dice, looking to complete.\n\n",
 				"------Stage 1--------\nOne die showing 1 pip, another showing 2 pips. \n\n--------Stage 2--------\n One die showing the Angry face",
 				"(which represents a 3), another showing 4 pips.\n\n--------Stage 3--------\nOne die showing 5 pips, another showing 6 pips.\n\n",
-				"\n\nPlayers do not have to perfectly roll each Stage;\nif a die shows one face in a set, that die is locked (left aside) and",
+				"\nPlayers do not have to perfectly roll each Stage;\nif a die shows one face in a set, that die is locked (left aside) and",
 				"the player now rolls the other die to complete the set.\n\nEXCEPTION: The 6 die face may never be locked!",
 				"\n\n-------The Anger-------\nIf the dice ever show both Angry Faces, the player must START OVER from **Stage 1**.", 
 				"\n\n-------The Victory-------\nThe first player to race through all Stages to reach Stage 3 and announces",
 				"'GET ANGRY!' is declared the victor!")
 
-		elif player_rule_answer.upper() == "E":
-			print("Sorry to see you go, I was looking forward to you getting angry!")
-				exit()
+		input("\n\n\nPress ENTER to start the game and to roll the dice!")
 
 	def roll_dice(self):
 		""" Rolls any dice not locked. """
@@ -99,7 +95,10 @@ class Angry_D():
 		
 		if self.die_1.index == 2 and self.die_2.index == 2:
 			self.current_stage = 1
-			print("You rolled to Angry Dice! You have been thrown back to the Round 1, you are not aiming for a 1 and a 2. Try not to be angry! ")
+			print("(╯︵╰,),", 
+				"You rolled to Angry Dice! You have been thrown back to the Stage 1, your new goal is die 1 and 2.",
+				"Try not to be angry!",
+				"(╯︵╰,)")
 			return True
 
 		else:
@@ -114,8 +113,6 @@ class Angry_D():
   
 		# # If the code gets to here, we know they are angry
 		# self.current_stage = 1
-		
-
 
 
 	def win_round(self):
@@ -136,12 +133,16 @@ class Angry_D():
 				if self.die_1.index != self.die_2.index:
 
 					if self.current_stage == 3:
-						print("Congratulations, you won! ")
+						print("\n\n¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸",
+							"\nᕕ( ᐛ )ᕗ Congratulations, you won! Announce 'GET ANGRY! to your competition ᕕ( ᐛ )ᕗ",
+							"\n¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩")
 						exit()
 
 					else:
 						self.current_stage += 1
-						print("Congratulations! You have advanced to the next round!")
+						print("\n\n..:*~*:._.:*~*:._.:**:._.:**:._.:*~*:CONGRATULATIONS:*~*:._.:**:._.:**:._.:*~*:._.:*~*:..\n\n",
+							"You have advanced to the next Stage! BE SURE TO TELL YOUR PARTNER AS LOUD AS YOU CAN!!!", 
+							"\n\n*~*:._.:**:._.:*~*:._.:*~*:*~*:._.:**:._.:**:._.:*~*:._.:**:._.:*~*:._.:**:._.:*~*:._.:*~*:\n\n")
 						return True
 						#we need to know if we changed rounds or not 
 
@@ -176,6 +177,10 @@ class Angry_D():
 				self.die_1.locked = True
 				invalid_choice = False
 
+			elif entree.upper() == "E":
+				print("We are so sorry to see you go, I was looing forward to you getting so ANGRY!!!")
+				exit()
+
 			else:
 				print("I do not understand your choice.")
 
@@ -185,7 +190,7 @@ class Angry_D():
 		#This function needs to take in the players choice and make sure it matched the round they on 
 
 		current_goal = self.stage_goal[self.current_stage]
-		print("current goal", current_goal)
+		print("\n\t»»---------------------► Remember, your current goal is:", current_goal)
 
 		# check both dice to see if they are locked, and if so, validly locked
 		for die in [self.die_1, self.die_2]:
@@ -199,13 +204,14 @@ class Angry_D():
 					if die.sides[die.index] == 6:
 
 	  					#give them a warning because they tried to lock in a 6 
-	  					print("Ops! You forgot, you can't lock in a 6.")
+	  					print("\n********Ops! You forgot, you can't lock in a 6********")
 	  					die.locked = False
 
 				else:
 					
 					#if it doesn't match, print a warning, don't allow player to lock die, ask if they would like to reroll
-					print("The die you locked doesn't match your current round's goals therefore you can't lock this die.")
+					print("\n\n\n\t********OPS! The die you locked doesn't match your current round's goals therefore you can't lock this die.********", 
+						"\n\t********We will reroll both die now.********")
 					die.locked = False 
 
 
