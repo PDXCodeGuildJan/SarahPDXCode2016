@@ -19,7 +19,7 @@ class Creature:
 	#this is where we put the global arguments 
 
 		self.name = ""
-		self.state = NORMAL
+		self.state = Creature.NORMAL
 		self.health = 20
 		self.max_health = 20
 		self.attack_points = 2

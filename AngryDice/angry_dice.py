@@ -25,11 +25,9 @@ class Angry_D():
 	def play_game(self):
 		"""Has the user play the game of Angry Dice. Starts the game, and loops through the game flow until they either win or quit."""
 
-		print("\n\nWelcome to Angry Dice, the game that makes you so angry!\n")
+		print("\nWelcome to Angry Dice, the game that makes you so angry!\nIf you get too angry and need to exit, please hit (E).")
 		
 		self.get_player_name()
-
-		self.rules()
 
 		#This while loop needs to come after the welcome so it doesnt repeat itself.
 		while self.current_stage < 4:
@@ -55,31 +53,8 @@ class Angry_D():
 		""" Asking for player name and updating it in the game. """
 
 		self.player_name = input("\nPlease tell me your name... ")
-		print("\nHi {0}! Lets Play! If you get too angry and need to exit, please hit (E)." .format(self.player_name))
+		print("\nHi {0}!! Lets Play! We will roll your dice now!" .format(self.player_name))
 
-
-	def rules(self):
-
-		player_rule_answer = input("\nDo you know the rules? (yes/no)")
-
-		if player_rule_answer.lower() == "yes":
-
-		if player_rule_answer.lower() == "no":
-			print("\n~~~~~~~~~~~Here are the rules:~~~~~~~~~~~\n\n------The Battle------\n Players roll their dice at the **same time**,",
-				"\ntrying to get from 1 to 6 the fastest.\nThe first to do so wins! \n\n------The Details------\n",
-				"Stage 1, then Stage 2, then Stage 3. When each Stage is complete, the player' must declare it out loud.", 
-				"Each player needs two Angry Dice. Players roll their dice, looking to complete.\n\n",
-				"------Stage 1--------\nOne die showing 1 pip, another showing 2 pips. \n\n--------Stage 2--------\n One die showing the Angry face",
-				"(which represents a 3), another showing 4 pips.\n\n--------Stage 3--------\nOne die showing 5 pips, another showing 6 pips.\n\n",
-				"\n\nPlayers do not have to perfectly roll each Stage;\nif a die shows one face in a set, that die is locked (left aside) and",
-				"the player now rolls the other die to complete the set.\n\nEXCEPTION: The 6 die face may never be locked!",
-				"\n\n-------The Anger-------\nIf the dice ever show both Angry Faces, the player must START OVER from **Stage 1**.", 
-				"\n\n-------The Victory-------\nThe first player to race through all Stages to reach Stage 3 and announces",
-				"'GET ANGRY!' is declared the victor!")
-
-		elif player_rule_answer.upper() == "E":
-			print("Sorry to see you go, I was looking forward to you getting angry!")
-				exit()
 
 	def roll_dice(self):
 		""" Rolls any dice not locked. """

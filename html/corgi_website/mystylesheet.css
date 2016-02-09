@@ -1,0 +1,43 @@
+.text-font {
+	font-family: 'Alegreya Sans SC', sans-serif; 
+}
+
+.img-section {
+	text-align: center;
+}
+
+.quote {
+
+	font-size:2em; 
+	color:#681E35; 
+	text-align: center; 
+}
+
+.name {
+		font-size:4em; 
+		color:#414755; 
+		font-family: 'Fugaz One', cursive; 
+		text-align:center; 
+}
+
+.descriptives-of-me {
+	font-size:14; 
+	color:#297DB9; 
+	text-align:center; 
+	padding:1px; 
+	border-style:hidden; 
+
+}
+
+.paragraph-of-me {
+	font-size:12; 
+	color:#094159; 
+	padding:1px; 
+	border-style:hidden
+}
+
+.interests {
+	font-size: 11; 
+	color:#33F1FF; 
+}
+
