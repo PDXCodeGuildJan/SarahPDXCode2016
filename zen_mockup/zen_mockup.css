@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Nova+Square);
+
+body {
+	background-color:rgb(238,238,238);
+
+}
+
+h1, h2, h3 {
+
+	font-family: 'Nova Square', cursive;
+	font-style: bold; 
+}
+
+h1 {
+
+	font-size: 40px; 
+	font-weight: bold; 
+	color:rgb(226,48,69);
+	margin-left: 150px
+}
+
+h2{
+	border-style: solid;
+	padding:1px;
+	border-color:rgb(226,48,69); 
+	background-color: rgb(226,48,69); 
+	color:rgb(225,246,224); 
+	margin-left: 150px; 
+	margin-right: 150px; 
+}
+
+h3{
+	font-size: 
+}
+
+.preamble {
+	border-style: hidden; 
+	padding: 10px;
+	margin: 20px;
+	margin-left: 150px; 
+	margin-right: 150px; 
+	background-color: rgb(27,69,73);
+	color: rgb(225,246,224);
+	box-shadow: 20px 20px 0px 10px rgb(122,179,176); 
+
+}
+
+.explanation {
+	border-style: solid; 
+	background-color:rgb(255,246,224);
+	border-width:1px;  
+	padding:10px;
+	margin: 20px; 
+	margin-left: 150px; 
+	margin-right: 150px; 
+	box-shadow: 20px 20px 0px 10px rgb(122,179,176); 
+
+}
+
+.participation {
+	border-style: solid; 
+	border-width:1px;
+	background-color: rgb(255,246,224);
+	padding: 10px; 
+	margin: 10px; 
+	margin-left:150px;
+	margin-right: 150px; 
+	box-shadow: 20px 20px 0px 10px rgb(122,179,176); 
+
+}
+
+footer {
+	border-style:hidden;
+	background-color: rgb(216,207,188);
+	color:rgb(255,246,224);
+}
+
+.view-css{
+	border-style:hidden;
+	margin: 4px; 
+	padding: 2px;
+	background-color: rgb(226,48,69);
+	box-shadow: 20px 20px 0px 20px rgb(245,149,129); 
+}
+
+.css-resources{
+	border-style:hidden;
+	margin: 4px; 
+	padding: 2px;
+	background-color: rgb(226,48,69);
+	box-shadow: 20px 20px 0px 20px rgb(245,149,129); 
+}
+
+.zen-faq{
+	border-style:hidden;
+	margin: 4px; 
+	padding: 2px;
+	background-color: rgb(226,48,69);
+	box-shadow: 20px 20px 0px 20px rgb(245,149,129); 
+}
+
+.zen-submit{
+	border-style:hidden;
+	margin: 4px; 
+	padding: 2px;
+	background-color: rgb(226,48,69);
+	box-shadow: 20px 20px 0px 20px rgb(245,149,129); 
+}
+
+.zen-translations{
+	border-style:hidden;
+	margin: 4px; 
+	padding: 2px;
+	background-color: rgb(226,48,69);
+	box-shadow: 20px 20px 0px 20px rgb(245,149,129); 
+}
+
+
+
+
+
+

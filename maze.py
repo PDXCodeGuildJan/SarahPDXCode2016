@@ -1,49 +1,49 @@
-# Make a text based maze that has 5 rooms, including a start and finish and can handle incorrect inputs 
-#gracefully. Handle inputs without case-sensitivity, add some traps, output the path taken at the finish.  
+# Make a text based maze that has 5 rooms, including a start and finish and can handle incorrect inputs
+#gracefully. Handle inputs without case-sensitivity, add some traps, output the path taken at the finish.
 
 
-#The first step to any py program is to define the main: 
+#The first step to any py program is to define the main:
 def main():
-	
-	#Welcome user to the program 
-	print("Welcome to the the Dream Maze! You woke up this morning and thought it was just like every other day. But instead," 
-	"you found yourself standing in a desert and you need to find your way home. Help navigate yourself back to to your bed! Type quit to exit at any time!") 
-	
+
+	#Welcome user to the program
+	print("Welcome to the the Dream Maze! You woke up this morning and thought it was just like every other day. But instead,"
+	"you found yourself standing in a desert and you need to find your way home. Help navigate yourself back to to your bed! Type quit to exit at any time!")
+
 	entree = ""
-	#clarifying that variable exists 
+	#clarifying that variable exists
 
 	while entree !="quit":
-	#This is saying that as long as "quit" isn't typed then do the following... 
-		
+	#This is saying that as long as "quit" isn't typed then do the following...
+
 		entree = input("You see magical doors to the left and to the right, which door do you dare take?")
 		#Ask the user where they would like to go
 
 		if entree.lower() == "left":
 			#if they chose the left door, call the lake function
 			lake()
-	 
-		elif entree.lower() == "right": 
-			#if they choose the right door, call the mountain function 
+
+		elif entree.lower() == "right":
+			#if they choose the right door, call the mountain function
 			mountain()
 
 		elif entree.lower() == "quit":
-			print("You have chosen to exit the game. Bad choice! Not fun for you! Good Bye!")
+			print("You have chosen to exit the game. Bad choice! No fun for you! Good Bye!")
 			exit()
 
 		else:
 			print("I do not understand what you typed. Do you remember your choices?(left/right)")
-			
-#this is the lake function 
+
+#this is the lake function
 def lake():
-	#Tell them what happens when they choose the lake function 
+	#Tell them what happens when they choose the lake function
 	print("You walked straight into a lake! You must turn around quickly before the lake monster eats you!")
-	entree = input("Do you want to turn around? (yes/no)")	
-	
+	entree = input("Do you want to turn around? (yes/no)")
+
 	if entree.lower() == "yes":
 		main()
 
 	elif entree.lower() == "no":
-		#tell them what happens and end the game by not giving it any more functions. 
+		#tell them what happens and end the game by not giving it any more functions.
 		print("Oh no! The lake monster has eaten you and you are now dead. Good Day.")
 
 	else:
@@ -62,7 +62,7 @@ def mountain():
 	else:
 		print("I do not understand what you typed. Do you remember your choices?(up/down)")
 
-def ocean(): 
+def ocean():
 	print("You are now on the edge of a continent! Quick, turn around before the waves swallow you up!")
 	entree = input("Do you want to go back to the mountains?(yes/no)")
 
@@ -72,7 +72,7 @@ def ocean():
 	elif entree.lower() == "no":
 		print("You decided to drown a slow and painful death. Goodbye.")
 
-	else: 
+	else:
 		print("I do not understand what you typed. Do you remember your choices?(yes/no)")
 
 def valley():
@@ -116,13 +116,3 @@ def hills():
 		print("I do not understand what you typed. Do you remember your choices?(yes/no)")
 
 main()
-
-
-
-
-
-
-
-
-
-
