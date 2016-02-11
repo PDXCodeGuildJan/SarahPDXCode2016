@@ -1,8 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Nova+Square);
 
+* {
+	border:solid 1px purple;
+}
+
+.page-wrapper{
+	width: 80%; 
+	margin: 0 auto; 
+}
+
 body {
 	background-color:rgb(238,238,238);
-
 }
 
 h1, h2, h3 {
@@ -13,10 +21,10 @@ h1, h2, h3 {
 
 h1 {
 
-	font-size: 40px; 
+	font-size: 3em; 
 	font-weight: bold; 
 	color:rgb(226,48,69);
-	margin-left: 150px
+	width:80%;
 }
 
 h2{
@@ -25,97 +33,102 @@ h2{
 	border-color:rgb(226,48,69); 
 	background-color: rgb(226,48,69); 
 	color:rgb(225,246,224); 
-	margin-left: 150px; 
-	margin-right: 150px; 
+	width: 95%;
 }
 
 h3{
-	font-size: 
+	font-weight: bold; 
+}
+
+.intro {
+	width: 80%; 
+}
+
+.resources {
+	display: none;
+}
+
+.main{
+	width:40%;
+	display: inline-block;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif; 
 }
 
 .preamble {
 	border-style: hidden; 
-	padding: 10px;
-	margin: 20px;
-	margin-left: 150px; 
-	margin-right: 150px; 
+	padding: 1px;
+	width: 95%;
 	background-color: rgb(27,69,73);
 	color: rgb(225,246,224);
-	box-shadow: 20px 20px 0px 10px rgb(122,179,176); 
+	margin-bottom: 40px; 
+	box-shadow: 30px 30px 0px 2px rgb(122,179,176); 
 
 }
 
-.explanation {
+.explanation, .participation {
 	border-style: solid; 
 	background-color:rgb(255,246,224);
 	border-width:1px;  
 	padding:10px;
-	margin: 20px; 
-	margin-left: 150px; 
-	margin-right: 150px; 
-	box-shadow: 20px 20px 0px 10px rgb(122,179,176); 
-
+	margin: 20px 0px 0px 0px; 
+	box-shadow: 20px 10px 0px 4px rgb(122,179,176); 
 }
 
-.participation {
-	border-style: solid; 
-	border-width:1px;
-	background-color: rgb(255,246,224);
-	padding: 10px; 
-	margin: 10px; 
-	margin-left:150px;
-	margin-right: 150px; 
-	box-shadow: 20px 20px 0px 10px rgb(122,179,176); 
-
+.participation a{
+	color:rgb(226,48,69); 
 }
+
+
+footer a{
+	color:rgb(216,207,188);
+	width:40%;
+	background-color: rgb(144,134,115);
+	box-shadow: 15px 15px 0px 15px rgb(216,207,188); 
+	text-align: right; 
+	padding:4px; 
+}
+
 
 footer {
 	border-style:hidden;
-	background-color: rgb(216,207,188);
-	color:rgb(255,246,224);
+	font-family: Arial, Helvetica, sans-serif; 
+	text-align: right; 
 }
 
-.view-css{
+
+li {
+	font-family: Arial, Helvetica, sans-serif; 
+	color:rgb(245,149,129);
+	list-style-type: none; 
+}
+
+
+a {
+	text-decoration: none; 
+}
+
+.sidebar{
+	display: inline-block;
+	width:30%;
+	vertical-align: top; 
+}
+
+.zen-resources a{
+	color:rgb(216,207,188);
+}
+
+.view-css, .css-resources, .zen-faq, .zen-submit, .zen-translations{
 	border-style:hidden;
-	margin: 4px; 
-	padding: 2px;
+	margin: 10px; 
+	padding: 4px;
 	background-color: rgb(226,48,69);
-	box-shadow: 20px 20px 0px 20px rgb(245,149,129); 
+	box-shadow: 15px 20px 0px 2px rgb(245,149,129); 
+	text-align: center; 
+	display: list-item;
 }
-
-.css-resources{
-	border-style:hidden;
-	margin: 4px; 
-	padding: 2px;
-	background-color: rgb(226,48,69);
-	box-shadow: 20px 20px 0px 20px rgb(245,149,129); 
-}
-
-.zen-faq{
-	border-style:hidden;
-	margin: 4px; 
-	padding: 2px;
-	background-color: rgb(226,48,69);
-	box-shadow: 20px 20px 0px 20px rgb(245,149,129); 
-}
-
-.zen-submit{
-	border-style:hidden;
-	margin: 4px; 
-	padding: 2px;
-	background-color: rgb(226,48,69);
-	box-shadow: 20px 20px 0px 20px rgb(245,149,129); 
-}
-
-.zen-translations{
-	border-style:hidden;
-	margin: 4px; 
-	padding: 2px;
-	background-color: rgb(226,48,69);
-	box-shadow: 20px 20px 0px 20px rgb(245,149,129); 
-}
-
-
 
 
 
