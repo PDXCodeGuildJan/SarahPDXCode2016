@@ -1,41 +1,50 @@
-# Angry Dice
-_An assignment to create the game Angry Dice with Python._
+# Introduction to Angry Dice
+##### By Sarah Fellows
 
-This project allows a user to play Angry Dice in the Terminal.
-The program enforces the rules of the game, progressing through the three stages for the user, and moving them back to Stage 1 when they roll double Angry faces.
+Welcome to my version of Angry Dice! This game was made with purpose of helping me learn and understand key Python3 concepts. But don't worry! You don't have to know Python3 or much about computers to play the game. I will walk you through each step! First, let's go over the rules of the game. Then we will go through all you need to do to open the game up and play.
 
-The full rules of the game are below:
+Lets make one thing clear first, I am assuming you have a Mac. The instructions below are for Mac users only. If you have a PC, go borrow a Mac from someone because I don't know if these will work the same way. Or go to your nearest Apple location and get on the Mac train. Choo, choo!
 
-## The Battle
-Players roll their dice at the **same time**, trying to get from 1 to 6 the
-fastest. The first to do so wins!
 
-## The Details
+## The Rules:
+### The Battle
+Players roll their dice at the **same time**, trying to get from 1 to 6 the fastest. The first to do so wins!
+
+Note: Your "other player" is someone who has this game downloaded on their computer too. So share the love with your friends.
+
+### The Details
 Each player needs two Angry Dice. Players roll their dice, looking to complete
 Stage 1, then Stage 2, then Stage 3. When each Stage is complete, the player
-must declare it out loud.
+must declare it out loud (i'll remind you).
 
-### Stage 1
+#### Stage 1
 One die showing 1 pip, another showing 2 pips.
 
-### Stage 2
+#### Stage 2
 One die showing the Angry face (which represents a 3), another showing 4 pips.
 
-### Stage 3
+#### Stage 3
 One die showing 5 pips, another showing 6 pips.
 
 Players do not have to perfectly roll each Stage; if a die shows one face in a
 set, that die is locked (left aside) and the player now rolls the other die
 to complete the set. EXCEPTION: The 6 die face may never be locked!
 
-## The Anger
+### The Anger
 If the dice ever show both Angry Faces, the player must START OVER from **Stage 1**.
 
-## The Victory
+### The Victory
 The first player to race through all Stages to reach Stage 3 and announces
 "GET ANGRY!" is declared the victor!
 
-## Recommended Dice Formatting
-It's recommended that you present the dice similar to:
-[  4  ] [  :( ]
-This is just a recommendation and you may feel free to present the dice on the screen as you like.
+## Ready to Play?
+First, lets download the proper programs to play. If you already have the following, ignore and go to step number 2.
+
+1. Download Python3 by going to https://www.python.org/downloads/ and click the download button on your left, 3.5.1. (if you haven't done so already).
+2. Next, open up your computer's console by following the instructions below:
+      1. hit 'command' and 'space bar' at the same time.
+      2. A search bar will pop up. Type in the word 'terminal' and hit 'enter'.
+4. Now we have opened your computers terminal! Nice work, I bet you didn't know that was there.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Next type **python3 angry_dice.py** and hit 'enter'. It is important you do this exactly or it won't work properly.
+5. Now, follow the instructions to start the game. Incase you forgot the rules, you will be given the choice to review them again.
+
+## Have fun!  

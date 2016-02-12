@@ -1,11 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Nova+Square);
 
-* {
-	border:solid 1px purple;
-}
+<!--* {-->
+	<!--border:solid 1px purple; -->
+<!--} -->
 
 .page-wrapper{
 	width: 80%; 
+	padding:50px 0;
 	margin: 0 auto; 
 }
 
@@ -17,12 +18,12 @@ h1, h2, h3 {
 
 	font-family: 'Nova Square', cursive;
 	font-style: bold; 
+	font-weight: 900;
 }
 
 h1 {
 
 	font-size: 3em; 
-	font-weight: bold; 
 	color:rgb(226,48,69);
 	width:80%;
 }
@@ -34,10 +35,7 @@ h2{
 	background-color: rgb(226,48,69); 
 	color:rgb(225,246,224); 
 	width: 95%;
-}
-
-h3{
-	font-weight: bold; 
+	border-radius: 1px;
 }
 
 .intro {
@@ -59,12 +57,13 @@ p {
 
 .preamble {
 	border-style: hidden; 
-	padding: 1px;
+	padding: 15px; 
 	width: 95%;
 	background-color: rgb(27,69,73);
 	color: rgb(225,246,224);
 	margin-bottom: 40px; 
 	box-shadow: 30px 30px 0px 2px rgb(122,179,176); 
+	border-radius: 1px;
 
 }
 
@@ -73,22 +72,30 @@ p {
 	background-color:rgb(255,246,224);
 	border-width:1px;  
 	padding:10px;
-	margin: 20px 0px 0px 0px; 
-	box-shadow: 20px 10px 0px 4px rgb(122,179,176); 
+	margin: 15px 0px 18px 0px; 
+	box-shadow: 30px 45px 0px 4px rgb(122,179,176); 
+	border-radius: 1px;
 }
 
 .participation a{
 	color:rgb(226,48,69); 
 }
 
+.participation{
+	margin-bottom: 70px; 
+}
+
 
 footer a{
 	color:rgb(216,207,188);
-	width:40%;
+	width:20%;
 	background-color: rgb(144,134,115);
-	box-shadow: 15px 15px 0px 15px rgb(216,207,188); 
+	box-shadow: 20px 30px 0px 15px rgb(216,207,188); 
 	text-align: right; 
+	margin-right: 12px; 
+	margin-top: 80px; 
 	padding:4px; 
+	border-radius: 1px;
 }
 
 
@@ -122,12 +129,14 @@ a {
 
 .view-css, .css-resources, .zen-faq, .zen-submit, .zen-translations{
 	border-style:hidden;
-	margin: 10px; 
+	margin: 8px; 
 	padding: 4px;
 	background-color: rgb(226,48,69);
-	box-shadow: 15px 20px 0px 2px rgb(245,149,129); 
+	box-shadow: 15px 10px 0px 2px rgb(245,149,129); 
 	text-align: center; 
 	display: list-item;
+	border-radius: 1px;
+
 }
 
 

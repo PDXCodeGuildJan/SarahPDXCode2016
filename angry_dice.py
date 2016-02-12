@@ -55,7 +55,7 @@ class Angry_D():
 		""" Asking for player name and updating it in the game. """
 
 		self.player_name = input("\nPlease tell me your name... ")
-		print("\nHi {0}! Lets Play! If you get too angry and need to exit, please hit 'control and C' at the same time." .format(self.player_name))
+		print("\nHi {0}! Lets Play!" .format(self.player_name))
 
 
 	def rules(self):
@@ -75,7 +75,7 @@ class Angry_D():
 				"\n\n-------The Victory-------\nThe first player to race through all Stages to reach Stage 3 and announces",
 				"'GET ANGRY!' is declared the victor!")
 
-		input("\n\n\nPress ENTER to start the game and to roll the dice!")
+		input("\n\n\nPress ENTER to start the game and to roll the dice! Your first Stages' goal is: [1, 2]")
 
 	def roll_dice(self):
 		""" Rolls any dice not locked. """
@@ -95,7 +95,7 @@ class Angry_D():
 		
 		if self.die_1.index == 2 and self.die_2.index == 2:
 			self.current_stage = 1
-			print("(╯︵╰,),", 
+			print("\n(╯︵╰,),", 
 				"You rolled to Angry Dice! You have been thrown back to the Stage 1, your new goal is die 1 and 2.",
 				"Try not to be angry!",
 				"(╯︵╰,)")
@@ -160,7 +160,7 @@ class Angry_D():
 		while invalid_choice:
 			#this function needs to take in the already rolled dice, and give out what their choice
 			#if self.die_1.value
-			entree = input("Would you like to reroll (a)ll of the die, just the (t)op die or just the (b)ottom die?")
+			entree = input("\nWould you like to reroll (a)ll of the die, just the (t)op die or just the (b)ottom die? Please enter (e) to exit.")
 
 			#Choices:
 			# Reroll both
@@ -177,8 +177,8 @@ class Angry_D():
 				self.die_1.locked = True
 				invalid_choice = False
 
-			elif entree.upper() == "E":
-				print("We are so sorry to see you go, I was looing forward to you getting so ANGRY!!!")
+			elif entree.lower() == "e":
+				print("We are so sorry to see you go, I was looking forward to you getting so ANGRY!!!")
 				exit()
 
 			else:
@@ -190,7 +190,7 @@ class Angry_D():
 		#This function needs to take in the players choice and make sure it matched the round they on 
 
 		current_goal = self.stage_goal[self.current_stage]
-		print("\n\t»»---------------------► Remember, your current goal is:", current_goal)
+		print("\n»»---------------------► Remember, your current goal is:", current_goal)
 
 		# check both dice to see if they are locked, and if so, validly locked
 		for die in [self.die_1, self.die_2]:
