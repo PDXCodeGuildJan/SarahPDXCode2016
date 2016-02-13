@@ -38,13 +38,18 @@ The first player to race through all Stages to reach Stage 3 and announces
 "GET ANGRY!" is declared the victor!
 
 ## Ready to Play?
-First, lets download the proper programs to play. If you already have the following, ignore and go to step number 2.
+First, lets download the proper programs and files to play. If you have already downloaded Python3 and the angry dice file, ignore and go to step number 3.
 
 1. Download Python3 by going to https://www.python.org/downloads/ and click the download button on your left, 3.5.1. (if you haven't done so already).
-2. Next, open up your computer's console by following the instructions below:
+2. Download the file called ** angry_dice.py ** from the email I send you. Save it to your Desktop as ** angry_dice.py **
+3. Next, open up your computer's console by following the instructions below:
       1. hit 'command' and 'space bar' at the same time.
       2. A search bar will pop up. Type in the word 'terminal' and hit 'enter'.
-4. Now we have opened your computers terminal! Nice work, I bet you didn't know that was there.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Next type **python3 angry_dice.py** and hit 'enter'. It is important you do this exactly or it won't work properly.
+4. Now we have opened your computers terminal! Nice work, I bet you didn't know that was there. Next type the following words exactly:
+**cd Desktop** now hit 'enter'. Then type in **python3 angry_dice.py** and hit 'enter'.
+
+  Note: It is important you do this exactly or it won't work properly.
+
 5. Now, follow the instructions to start the game. Incase you forgot the rules, you will be given the choice to review them again.
 
 ## Have fun!  
