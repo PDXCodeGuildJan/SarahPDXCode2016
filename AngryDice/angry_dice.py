@@ -74,8 +74,8 @@ class Angry_D():
 				"first to do so wins! \n\n------The Details------\nStage 1," \
 				" then Stage 2, then Stage 3. When each Stage is complete," \
 				" the player' must declare it out loud. Each player needs two" \
-				" Angry Dice. Players roll their dice, looking to complete.\n\n" \
-				"------Stage 1--------\nOne die showing 1 pip, another" \
+				" Angry Dice. Players roll their dice, looking to complete." \
+				"\n\n------Stage 1--------\nOne die showing 1 pip, another" \
 				" showing 2 pips. \n\n--------Stage 2--------\n One die" \
 				" showing the Angry face (which represents a 3)," \
 				" another showing 4 pips.\n\n--------Stage 3--------\nOne die" \
@@ -154,16 +154,23 @@ class Angry_D():
 				if self.die_1.index != self.die_2.index:
 
 					if self.current_stage == 3:
-						print("\n\n¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸",
-							"\nᕕ( ᐛ )ᕗ Congratulations, you won! Announce 'GET ANGRY! to your competition ᕕ( ᐛ )ᕗ",
-							"\n¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩")
+						print("\n\n¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪" \
+							"·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸\n" \
+							"ᕕ( ᐛ )ᕗ Congratulations, you won! Announce 'GET" \
+							" ANGRY! to your competition ᕕ( ᐛ )ᕗ\n¸¸♬·¯·♩" \
+							"¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩" \
+							"¸¸♪·¯·♫¸¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸¸♬·¯·♩")
 						exit()
 
 					else:
 						self.current_stage += 1
-						print("\n\n..:*~*:._.:*~*:._.:**:._.:**:._.:*~*:CONGRATULATIONS:*~*:._.:**:._.:**:._.:*~*:._.:*~*:..\n\n",
-							"You have advanced to the next Stage! BE SURE TO TELL YOUR PARTNER AS LOUD AS YOU CAN!!!", 
-							"\n\n*~*:._.:**:._.:*~*:._.:*~*:*~*:._.:**:._.:**:._.:*~*:._.:**:._.:*~*:._.:**:._.:*~*:._.:*~*:\n\n")
+						print("\n\n..:*~*:._.:*~*:._.:**:._.:**:._.:*~*:" \
+							"CONGRATULATIONS:*~*:._.:**:._.:**:._.:*~*:._.:" \
+							"*~*:..\n\nYou have advanced to the next Stage!" \
+							" BE SURE TO TELL YOUR PARTNER AS LOUD AS YOU" \
+							" CAN!!!\n\n*~*:._.:**:._.:*~*:._.:*~*:*~*:._.:*" \
+							"*:._.:**:._.:*~*:._.:**:._.:*~*:._.:**:._.:*~*" \
+							":._.:*~*:\n\n")
 						return True
 						#we need to know if we changed rounds or not 
 

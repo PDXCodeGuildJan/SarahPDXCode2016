@@ -18,29 +18,26 @@ Stage 1, then Stage 2, then Stage 3. When each Stage is complete, the player
 must declare it out loud (i'll remind you).
 
 #### Stage 1
-One die showing 1 pip, another showing 2 pips.
+You are aiming for ene die showing 1 pip, another showing 2 pips.
 
 #### Stage 2
-One die showing the Angry face (which represents a 3), another showing 4 pips.
+Now you are aiming for one die showing the Angry face (which represents a 3), another showing 4 pips.
 
 #### Stage 3
-One die showing 5 pips, another showing 6 pips.
+Bet you can't guess what we are aiming for now! You guess it, one die showing 5 pips, another showing 6 pips.
 
-Players do not have to perfectly roll each Stage; if a die shows one face in a
-set, that die is locked (left aside) and the player now rolls the other die
-to complete the set. EXCEPTION: The 6 die face may never be locked!
+Players do not have to perfectly roll each Stage; if a die shows one face in a set, that die is locked (left aside) and the player now rolls the other die to complete the set. **EXCEPTION: The 6 die face may never be locked!**
 
-### The Anger
+### The Anger (rawr!)
 If the dice ever show both Angry Faces, the player must START OVER from **Stage 1**.
 
 ### The Victory
-The first player to race through all Stages to reach Stage 3 and announces
-"GET ANGRY!" is declared the victor!
+The first player to race through all Stages to reach Stage 3 and announces "GET ANGRY!" is declared the victor!
 
 ## Ready to Play?
-First, lets download the proper programs and files to play. If you have already downloaded Python3 and the angry dice file, ignore and go to step number 3.
+First, lets download the proper programs and files to play. If you have already downloaded Python3 and the angry dice file, ignore Steps 1 & 2 and skip to step number 3.
 
-1. Download Python3 by going to https://www.python.org/downloads/ and click the download button on your left, 3.5.1. (if you haven't done so already).
+1. First, download Python3 by going to https://www.python.org/downloads/ and click the download button on your left, 3.5.1.
 2. Download the file called ** angry_dice.py ** from the email I send you. Save it to your Desktop as ** angry_dice.py **
 3. Next, open up your computer's console by following the instructions below:
       1. hit 'command' and 'space bar' at the same time.
