@@ -5,9 +5,9 @@
 <!--} -->
 
 .page-wrapper{
-	width: 80%; 
+	width: 80%;
 	padding:50px 0;
-	margin: 0 auto; 
+	margin: 0 auto;
 }
 
 body {
@@ -17,13 +17,13 @@ body {
 h1, h2, h3 {
 
 	font-family: 'Nova Square', cursive;
-	font-style: bold; 
+	font-style: bold;
 	font-weight: 900;
 }
 
 h1 {
 
-	font-size: 3em; 
+	font-size: 3em;
 	color:rgb(226,48,69);
 	width:80%;
 }
@@ -31,15 +31,15 @@ h1 {
 h2{
 	border-style: solid;
 	padding:1px;
-	border-color:rgb(226,48,69); 
-	background-color: rgb(226,48,69); 
-	color:rgb(225,246,224); 
+	border-color:rgb(226,48,69);
+	background-color: rgb(226,48,69);
+	color:rgb(225,246,224);
 	width: 95%;
 	border-radius: 1px;
 }
 
 .intro {
-	width: 80%; 
+	width: 80%;
 }
 
 .resources {
@@ -52,37 +52,37 @@ h2{
 }
 
 p {
-	font-family: Arial, Helvetica, sans-serif; 
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .preamble {
-	border-style: hidden; 
-	padding: 15px; 
+	border-style: hidden;
+	padding: 15px;
 	width: 95%;
 	background-color: rgb(27,69,73);
 	color: rgb(225,246,224);
-	margin-bottom: 40px; 
-	box-shadow: 30px 30px 0px 2px rgb(122,179,176); 
+	margin-bottom: 40px;
+	box-shadow: 30px 30px 0px 2px rgb(122,179,176);
 	border-radius: 1px;
 
 }
 
 .explanation, .participation {
-	border-style: solid; 
+	border-style: solid;
 	background-color:rgb(255,246,224);
-	border-width:1px;  
+	border-width:1px;
 	padding:10px;
-	margin: 15px 0px 18px 0px; 
-	box-shadow: 30px 45px 0px 4px rgb(122,179,176); 
+	margin: 15px 0px 18px 0px;
+	box-shadow: 30px 45px 0px 4px rgb(122,179,176);
 	border-radius: 1px;
 }
 
 .participation a{
-	color:rgb(226,48,69); 
+	color:rgb(226,48,69);
 }
 
 .participation{
-	margin-bottom: 70px; 
+	margin-bottom: 70px;
 }
 
 
@@ -90,37 +90,38 @@ footer a{
 	color:rgb(216,207,188);
 	width:20%;
 	background-color: rgb(144,134,115);
-	box-shadow: 20px 30px 0px 15px rgb(216,207,188); 
-	text-align: right; 
-	margin-right: 12px; 
-	margin-top: 80px; 
-	padding:4px; 
+	box-shadow: 20px 30px 0px 15px rgb(216,207,188);
+	text-align: right;
+	margin-right: 12px;
+	margin-top: 80px;
+	margin-left: 2px
+	padding:4px;
 	border-radius: 1px;
 }
 
 
 footer {
 	border-style:hidden;
-	font-family: Arial, Helvetica, sans-serif; 
-	text-align: right; 
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: right;
 }
 
 
 li {
-	font-family: Arial, Helvetica, sans-serif; 
+	font-family: Arial, Helvetica, sans-serif;
 	color:rgb(245,149,129);
-	list-style-type: none; 
+	list-style-type: none;
 }
 
 
 a {
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 .sidebar{
 	display: inline-block;
 	width:30%;
-	vertical-align: top; 
+	vertical-align: top;
 }
 
 .zen-resources a{
@@ -129,16 +130,12 @@ a {
 
 .view-css, .css-resources, .zen-faq, .zen-submit, .zen-translations{
 	border-style:hidden;
-	margin: 8px; 
+	margin: 8px;
 	padding: 4px;
 	background-color: rgb(226,48,69);
-	box-shadow: 15px 10px 0px 2px rgb(245,149,129); 
-	text-align: center; 
+	box-shadow: 15px 10px 0px 2px rgb(245,149,129);
+	text-align: center;
 	display: list-item;
 	border-radius: 1px;
 
 }
-
-
-
-
