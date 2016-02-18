@@ -3,8 +3,22 @@
 __author__ = "Sarah Fellows"
 
 def main():
- 	pass 
+   link = LinkedList()
+   link.add(4)
+   link.add(2)
+   link.add(86)
+   link.add(4)
+   link.add(7)
+   print("Current list:", link)
 
+   link.remove(4)
+   print("List after first 4 is removed:", link)
+
+   link.remove(4)
+   print("List after second 4 is removed:", link)
+
+   print("Success! Attempt to remove a third 4 yielded no crashes!")
+   link.remove(4)
 
 
 class Node():
@@ -64,12 +78,27 @@ class LinkedList():
 
 
 
-		# new_node.next_node = self.head #link the new node to the previous node 
-		# self.head = new_node #setting the current node to the new node 	
-
-
 	def remove (self,value):
-		pass
+		"""This remove methods removes certain nodes"""
+
+		#We need to traverse the list looking for the number we want to remove 
+
+		#need to identify where the head currently is 
+		link = self.head
+
+		#identify the second or next node visited to be able to track it 
+		#the iternation will stop before it gets to None 
+		current_link = None
+
+		#once the number is found, found_link will be true 
+		found_link = False 
+
+		#Create a while loop that moved the current link (node) to find the number we are
+			#looking for an remove it 
+		while not found:
+			if link.main() == value:
+				#not completed 
+
 
 
 
