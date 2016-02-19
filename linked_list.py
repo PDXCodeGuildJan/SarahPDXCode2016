@@ -95,9 +95,12 @@ class LinkedList():
 
 		#Create a while loop that moved the current link (node) to find the number we are
 			#looking for an remove it 
-		while not found:
+		while current_link not found:
 			if link.main() == value:
 				#not completed 
+
+
+
 
 
 
