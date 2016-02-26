@@ -13,42 +13,44 @@ function showGalleryImgs(){
     alert("This is a test popup"); 
 
     // <img src="images/pdxcg_01.jpg">
+    var oneImage = ""; 
+    var allImages = []; 
 
 
-    images = ""
     //grab the id from HTML
-    var showGalleryImgs = document.getElementById("gallery")
+    var showGalleryImgs = document.getElementById("gallery"); 
 
-    //<img src="images/pdxcg_01.jpg" /> 
+    //<img src="images/pdxcg_01.jpg"/> 
     // final = front + middle + end 
         // change the middle 
 
-    imageStrBeg = "<img src='images/pdxcg_'"
-    i = ""
-    imageStrEnd = ".jpg/>"
+    var imageStrBeg = "<img src='images/pdxcg_'"; 
+
+    var imageStrEnd = ".jpg/>"; 
 
     
 
     //iterate through each photo number 
 
     // loop through each image and put eat new one in a new string 
-    for (var i=0; i<60; i++){
+    for (var i = 1; i <= 60; i++){
         // if the variable being iterated is less than 10 (or contained a 0)
         if (i <= 9){
             // add 0 to the number 
-            i = "0" + i; 
+            i = "0" + i;
+        }; 
 
         // elif if the number is 42, do something else 
 
         // concatinate them back together in a string variable  
-        images = imageStrBeg + i + imageStrEnd
-
-        //put them into a array each time they iterate 
-
-        }
+        oneImage = (imageStrBeg + i + imageStrEnd); 
+            //put them into a array each time they iterate 
+        allImages.push(oneImage); 
 
 
-    }
+    }; 
+
+    console.log(allImages)
 
     // associate each new variable with a new photo 
 
