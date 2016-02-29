@@ -4,16 +4,11 @@
 //Format: element.addEventListener('event', functionName[flowBool]); 
 window.addEventListener('load', showGalleryImgs); 
 
-
-
 // update the slogan to add a ", user_name", with the user's name
-
-
-
 
 //loop through the image folder and display each image in the folder
 function showGalleryImgs(){
-    alert("This is a test popup"); 
+   // alert("This is a test popup"); 
 
     // make empty lists to put the image strings in
     var oneImage = ""; 
@@ -38,7 +33,7 @@ function showGalleryImgs(){
         // if the variable being iterated is less than 10 (i.e. containes a 0)
         if (i <= 9){
             // add 0 to the number 
-            i = "0" + i;
+            i = "0" + i; 
         }; 
 
         // elif if the number is 42, do something else 
@@ -59,15 +54,56 @@ function showGalleryImgs(){
     showGalleryImgs.innerHTML = allImages
 
 }; 
+    
+// when the lightbox is up, is the user clicks anywhere not on the image, the lightbox closes:
+// add the functionality so that if a user clicks on an image, the lightbox appears with that image loaded in: 
+// 1) make an onlickevent - if click anywhere on page, it changes the class = 'display-none' to "display-img'
+
+function lightBox(event){ 
+    //event is like self, specific to this function only 
+    //alert("This is for the lightBox function!")
+
+   //console.log(event.target)
+   //event = click, target = what you are point out 
+
+   // if click on the photo, capture src of it, make that source the picture 
+    var imageClick = event.target.src
+
+    // if click anywhere between the photos, make nothing happen 
+   if (imageClick){
+
+   //grab the id from HTML, change class name 
+       var imageShow = document.getElementById("image_show"); 
+       imageShow.className = "display_img"; 
+
+        // taking the element id's first child - img - change pic is the div 
+        //changing the src to reflect the one that is being clicked on
+        imageShow.firstChild.src = imageClick
+    }
+}
+document.addEventListener('click', lightBox); 
 
 
 
+//If click outside photo, image disapears - class goes back to display none
+function closePhotoviewing(){ 
+    //alert("This is closePhotoviewing")
+   
+     // add an event listener to the div 
+    var imageDisapear = document.getElementById("image_show"); 
+   
+    // if we click anywhere outside the photo... 
+    if (imageDisapear){
+    //grab the id from HTML, change class name 
+        imageDisapear.setAttribute("class", "display_none"); 
+    }
+    // if you click on the photo, do nothing 
 
-// add the functionality so that if a user clicks on an image, the lightbox appears with that image loaded in
-  
+    // if you click anywhere else besides the photo - change the display_img back to display_none inclass 
+}
+image_show.addEventListener('click', closePhotoviewing); 
 
 
-// when the lightbox is up, is the user clicks anywhere not on the image, the lightbox closes
 
 
 

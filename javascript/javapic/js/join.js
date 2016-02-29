@@ -7,3 +7,9 @@
 // any validation errors should be presented clearly to the user so that they may correct them
 
 // on completion of the form, navigate the user to the gallery, passing their name to the page
+
+
+
+
+
+// use alerts at the beginning 
