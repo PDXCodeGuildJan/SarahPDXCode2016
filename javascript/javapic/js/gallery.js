@@ -34,7 +34,9 @@ function showGalleryImgs(){
         if (i <= 9){
             // add 0 to the number 
             i = "0" + i; 
-        }; 
+        } else if (i === 42){
+            continue
+        }
 
         // elif if the number is 42, do something else 
 
