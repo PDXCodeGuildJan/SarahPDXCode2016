@@ -13,6 +13,9 @@ addRemoveButton.onclick = removeStock;
 var addDeleteButton = document.getElementById("del-item"); 
 addDeleteButton.onclick = deleteItem; 
 
+
+window.onload = loadData; 
+
 // make a global list to store all the inventory 
 var products = []; 
 
@@ -41,6 +44,8 @@ var products = [];
             // change the inStock value of the selected things    
             //for (var 1=0; i<checked.length; i++)
             };
+
+    saveData(); 
     }; 
 
 
@@ -56,6 +61,8 @@ function removeStock(){
         status.textContent = "No"; 
         status.className = "false"; 
     }
+
+    saveData(); 
 }; 
 
 
@@ -78,6 +85,7 @@ function addItem() {
         products.push(newProd); 
 
         displayInventory(); 
+        saveData(); 
        
 }; 
 
@@ -91,7 +99,7 @@ function deleteItem(){
     // delete the Product objects that corresponds to those rows 
     // from the Producsts array 
     // looop through backwards
-    for (var i = removeBox.length-1; i >= 0, i--){
+    for (var i = removeBox.length -1; i >= 0; i--){
         //Get the id on the row that the checkbox is in 
         var prodId = parseInt(removeBox[i].parentNode.parentNode.id); 
 
@@ -104,6 +112,7 @@ function deleteItem(){
 
     //Rerender the HTML list, using displayInventory
     displayInventory(); 
+    saveData(); 
 
 }; 
 
@@ -178,6 +187,8 @@ function displayInventory(){
         // Add the new row to the actual TBODY in the HTML 
         inventory.appendChild(newRow); 
     }; 
+
+    saveData(); 
 }
 
 
@@ -195,6 +206,40 @@ function Product(prodname, price, inStock){
     }
 
 }; 
+
+// Saves the current state of products 
+function saveData(){ 
+    // Transform the products array into a JSON string 
+    var productJSON = JSON.stringify(products); 
+    console.log(productJSON); 
+
+
+    // Save that JSON string to a local storage (aka local memory of the browser)
+    localStorage.setItem("price-list", productJSON); 
+
+
+}
+
+// Loads the current state of the products array 
+function loadData (){
+
+    // Load the data from local storage 
+    var productJSON = localStorage.getItem("price-list"); 
+    console.log("Loaded Data", productJSON)
+
+    // Parse it into a JS data type and save to the global array 
+    products = JSON.parse(productJSON)
+    console.log(products); 
+
+    //Double check that products is set to a list if null
+    if (!products){
+        products = []; 
+    }
+
+    //Update the rendered display 
+    displayInventory(); 
+
+}
 
 
 
