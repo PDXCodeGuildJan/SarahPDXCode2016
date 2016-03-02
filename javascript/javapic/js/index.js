@@ -3,9 +3,10 @@
 // have the background image of the jumbotron change to 
 //another image in the folder every 10 seconds
 
-// add an onclick 
+// first step to project, add an onclick: 
+//document.getElementById("jumbotron").addEventListener("click", rotateImages); 
 
-document.getElementById("jumbotron").addEventListener("click", rotateImages); 
+setInterval(rotateImages, 10000); 
 
 // need to track the value of i outside the function so it doesn't
 // 
@@ -21,30 +22,34 @@ function rotateImages(){
     //concatinate just like gallery 
     var imageStrBeg = "url('images/pdxcg_"; 
     var imageStrEnd = ".jpg')"; 
+    
+    // if the number is equal to 42, add one to it to skip it and make it 43
+    if (i === 42){
+        i++; 
 
-     if (i <= 9){
+    // else if the number is less than 9, add 0 to the number 
+    } else if (i <= 9){
         // add 0 to the number 
         i = "0" + i; 
-        };
+    }; 
 
+    //concatinate the string together to make the image number increment 
     var singleImage = (imageStrBeg + i + imageStrEnd)
-    console.log(singleImage)
+    //console.log(singleImage)
 
     //change jumbo src to equal the concatinated equasion 
     jumbo.style.backgroundImage = singleImage
 
-    // increment 
+    //if i - the number of photo - is equal to 60, change it to equal one
+    // so it loops back 
+    if (i === 60){
+        i = 1
+    }
 
+    // increment 
     i++
 
 
     //need to change the style id within the jumbotron 
-    
-    //var rotateImages = document.getElementById("jumbotron"); 
-    // rotateImages.style.background-image = ""
-    //document.getElementById('jumbotron').background-image = url("../images/pdxcg_08.jpg")
-
-    //loop through the image folder and display each image in the folder 
-    //upon clicking
 }
 
