@@ -88,18 +88,14 @@ function removeStock(){
     //     if (removeBox[i].type === "checkbox"){
     //         if (removeBox[i].checked){
     //             checkedBoxestoremove.pop(removeBox[i]); 
-
 }
 
 function addItem() {
     // assigning a variable to catch the input from html 
     // "name" is the elemtent ID name in the html 
     var materialName = document.getElementById("name").value; 
-    // console.log("Inside addItem function");      - printing in JS, a reference to the object in the browser
     var price = document.getElementById("price").value; 
-    //console.log(price); 
     var inStock = document.getElementById("in-stock").checked; // if checked it returns true 
-    //console.log(inStock); 
 
     var inventory = document.getElementById("inventory"); 
 
