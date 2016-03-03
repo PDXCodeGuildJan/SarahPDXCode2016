@@ -256,8 +256,7 @@ function loadDataWithAJAX(){
             // response.Text is going to hold the info we get back from the server 
             var prodJSON = request.responseText; 
             products = JSON.parse(prodJSON); 
-            displayInventory(); 
-
+            displayInventory();
 
     }
 
