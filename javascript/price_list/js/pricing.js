@@ -224,8 +224,8 @@ function saveData(){
 function loadData (){
 
     // Load the data from local storage 
-    var productJSON = localStorage.getItem("price-list"); 
-    console.log("Loaded Data", productJSON)
+    // var productJSON = localStorage.getItem("price-list"); 
+    // console.log("Loaded Data", productJSON)
 
     // Parse it into a JS data type and save to the global array 
     products = JSON.parse(productJSON)
