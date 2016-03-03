@@ -223,9 +223,9 @@ function saveData(){
 // Loads the current state of the products array 
 function loadData (){
 
-    // Load the data from local storage 
-    // var productJSON = localStorage.getItem("price-list"); 
-    // console.log("Loaded Data", productJSON)
+    //Load the data from local storage 
+    var productJSON = localStorage.getItem("price-list"); 
+   // console.log("Loaded Data", productJSON)
 
     // Parse it into a JS data type and save to the global array 
     products = JSON.parse(productJSON)
@@ -238,6 +238,13 @@ function loadData (){
 
     //Update the rendered display 
     displayInventory(); 
+
+}
+
+// Load the data from json file on the server with AJAX. 
+function loadDataWithAJAX(){
+
+
 
 }
 
