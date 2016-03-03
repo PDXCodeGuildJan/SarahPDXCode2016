@@ -254,7 +254,10 @@ function loadDataWithAJAX(){
     request.onload = function (){
         if (request.status === 200){
             // response.Text is going to hold the info we get back from the server 
-            console.log(request.responseText)
+            var prodJSON = request.responseText; 
+            products = JSON.parse(prodJSON); 
+            displayInventory(); 
+
 
     }
 
