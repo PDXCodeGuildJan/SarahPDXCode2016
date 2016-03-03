@@ -14,7 +14,7 @@ var addDeleteButton = document.getElementById("del-item");
 addDeleteButton.onclick = deleteItem; 
 
 
-window.onload = loadData; 
+window.onload = loadDataWithAJAX; 
 
 // make a global list to store all the inventory 
 var products = []; 
@@ -244,10 +244,25 @@ function loadData (){
 // Load the data from json file on the server with AJAX. 
 function loadDataWithAJAX(){
 
+    // Create new XMLHttpRequest object
+    var request = new XMLHttpRequest(); 
 
+    // add the call info 
+    request.open('GET', 'data.json', true); 
+
+    // set to an annonymous function 
+    request.onload = function (){
+        if (request.status === 200){
+            // response.Text is going to hold the info we get back from the server 
+            console.log(request.responseText)
+
+    }
 
 }
+    // Actually send out the request 
+    request.send(); 
 
+}
 
 
 
