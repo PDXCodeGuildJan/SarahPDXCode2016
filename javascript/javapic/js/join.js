@@ -9,10 +9,7 @@
 // on completion of the form, navigate the user to the gallery, 
 //passing their name to the page
 
-
-
-
-
+//--------------------------------------------------------------------//
 // add form validation that works in all major browsers 
 //(you'll need to deactivate browser validate to check this)
 function disableFormValidation(){ 
@@ -29,56 +26,64 @@ disableFormValidation();
 function name(){ 
 
     //grab the value they input in the name box 
-    var nameCheck = document.getElementById("signup"); 
-    nameCheck.name.value; 
+    var nameCheck = document.getElementById("signup").name.value;
 
-    if (name.length > 2){
-        alert ("The name needs to have at least two charcters. Please try again.")
-    }
-
-    // temporarily store information to be able to check it 
-
-    //check to see if name is all letters and no characters  
-
-    // alert if input is anything other than letters 
-    //return true or false 
-
-}; 
+    //check to see if name has more than one character 
+    if (nameCheck.length > 1){
+        return true; 
+    } else 
+        alert("Please input a name greater than one character"); 
+    return false; 
+    }; 
 //
+    //document.onclick = function() {console.log(name())}; 
+
 
 // function to check the user name input 
 // alert is userName isn't correct 
 function userName(){ 
 
-    // temporarily store information to be able to check it 
+    var getUserName = document.getElementById("signup").username.value; 
 
+    // check to see if username has more than one character 
     //make sure username is enough characters and matches what I set is required 
-
-    //alert if username isn't enough characters 
-
-    // return true or false 
-
-}; 
+    if (getUserName.length > 5){
+        return true; 
+    } else 
+        //alert if username isn't enough characters 
+        alert("Please create a username that has more than five characters")
+    return false; 
+    }; 
 
 
 //function to check to see if the email is correct 
 // regex.test to check the email - use regex101.com to help
 function emailCheck(){
 
+    var emailCheck = document.getElementById("signup").email.value; 
+
+    if (emailCheck)
+
 }; 
 
 //overall function to make sure all of above are valid and can use the 
-function verifyAllForSubmit(){
 
+
+function verifyAllForSubmit(event){
+    event.preventDefault(); 
+
+    nameVer = name()
+    userNameVer = userName
+    
+
+    if // nameVer & username and email check all do this... else... do something else 
 
 }; 
 
-
-
 // set onlick for submit button 
 //prevent.default needs to be applied so it doesn't refresh by itself
-document.getElementById("submit").addEventListener("click", verifyAllForSubmit).preventDefault(); 
-
+// turning off the default routing of where the form is going 
+document.getElementById("submit").addEventListener("click", verifyAllForSubmit); 
 
 
 
