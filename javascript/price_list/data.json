@@ -1,3 +1,24 @@
 // copying JSON data when we printed out our load data 
 
-[{"prodName":"Flowers","price":"6","inStock":true},{"prodName":"Soil","price":"16","inStock":true},{"prodName":"Seeds","price":"2","inStock":false},{"prodName":"Pots","price":"30","inStock":true}]
+[
+  {
+    "prodName": "Flowers",
+    "price": "6",
+    "inStock": true
+  },
+  {
+    "prodName": "Soil",
+    "price": "16",
+    "inStock": true
+  },
+  {
+    "prodName": "Seeds",
+    "price": "2",
+    "inStock": false
+  },
+  {
+    "prodName": "Pots",
+    "price": "30",
+    "inStock": true
+  }
+]
