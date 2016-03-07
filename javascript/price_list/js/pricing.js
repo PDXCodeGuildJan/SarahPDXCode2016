@@ -126,8 +126,6 @@ function getSelectedRowBoxes(){
 }; 
 
 
-
-
 // Adds all the items in the products array to the HTML.
 function displayInventory(){
 
