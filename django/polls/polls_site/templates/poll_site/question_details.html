@@ -6,8 +6,9 @@
 
     <h1>{{ question.question_text }}</h1>
 
-    <div>
-        <form enctype="multipart/form-data" method="post" id="question_vote"> 
+    <div id="question_things">
+        <form id="question_vote" submit="submit_vote">
+            {% csrf_taken %}
             {% for choice in question.choice_set.all %}
                 <input type="radio" name="question_choice" value="{{chioce.id}}">
                 {{ choice.choice_text}}
