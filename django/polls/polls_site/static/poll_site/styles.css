@@ -1,0 +1,31 @@
+body {
+    width: 80%;
+    margin: 0 auto;
+    background-image: url("hoodoomtn.jpg");
+}
+
+h1, h2 {
+
+    color: #FF1493;
+    text-align: center; 
+
+}
+
+div {
+    color: #FF1493;
+    text-align: center; 
+}
+
+ul {
+    color: #FF1493; 
+    text-align: center; 
+
+}
+
+nav {
+
+    color: yellow;
+    padding: 1px; 
+    margin: 3px; 
+
+}
