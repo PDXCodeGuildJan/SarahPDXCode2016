@@ -1,4 +1,4 @@
-"""poll_project URL Configuration
+"""port_proj URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -17,10 +17,6 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-#Need to import polls_site.py world
-from polls_site.views import *
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', hello_world_render), 
 ]

@@ -4,14 +4,14 @@ body {
     background-image: url("hoodoomtn.jpg");
 }
 
-h1, h2{
+h1, h2 {
 
     color: #FF1493;
     text-align: center; 
 
 }
 
-div{
+div {
     color: #FF1493;
     text-align: center; 
 }
@@ -19,5 +19,13 @@ div{
 ul {
     color: #FF1493; 
     text-align: center; 
+
+}
+
+nav {
+
+    color: yellow;
+    padding: 1px; 
+    margin: 3px; 
 
 }
