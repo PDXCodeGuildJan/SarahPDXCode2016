@@ -1,10 +1,13 @@
 body {
     background-color: black; 
     font-family: Helvetica; 
+    color: white;
 
 }
 
 header {
+    font-size: 2em;
+    margin: 10px 0;
 
 
 }
@@ -12,6 +15,6 @@ header {
 .posts {
     padding: 10px;
     margin: 10px; 
-    border: 
+    border: 2px; 
 
 }

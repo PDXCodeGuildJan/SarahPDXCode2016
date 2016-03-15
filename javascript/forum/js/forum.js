@@ -32,9 +32,8 @@ var titleBox = document.getElementById("title").value;
 var textBox = document.getElementById("text-box").value; 
 
 // send data to Google ** CORS error will say this failed even if it doesn't 
-
-console.log(titleBox)
-console.log(textBox)
+// console.log(titleBox)
+// console.log(textBox)
 
 }
 
@@ -45,6 +44,10 @@ console.log(textBox)
 // }
 
 function getTheInfo(){
+
+    //Get the data from the spreadsheet 
+        //specifiy which data to get from the spreadsheet 
+
     $.ajax({
         url: "https://spreadsheets.google.com/feeds/list/1NlIJLGd32t38kt6mJgc64SFpDM_ltq7nfzaRjV1wpLI/default/public/values?alt=json-in-script", 
         // tell jQuey that we are expecting JSONP 
@@ -55,6 +58,7 @@ function getTheInfo(){
             console.log("Get was successful")}, 
         error: function(){
             console.log("Get was unsuccessful")},
+
 
     }); 
 
