@@ -24,10 +24,11 @@ submit.addEventListener("click", getBoxInfo)
 
 // Function that grabs the information from the title and text box
 function getBoxInfo (event){ 
+
     //prevent it from autosubmitting form 
     event.preventDefault(); 
 
-    //get the data out of the form
+    //get the data value out of the form fields 
     var titleBox = document.getElementById("title").value; 
     var textBox = document.getElementById("post").value; 
         console.log(titleBox); 
@@ -37,19 +38,20 @@ function getBoxInfo (event){
 
  //Get the data from the spreadsheet 
 function getTheInfo(){
-   
+
+   // AJAX call to get the data from the google spreadsheet
     $.ajax({
         url: "https://spreadsheets.google.com/feeds/list/1NlIJLGd32t38kt6mJgc64SFpDM_ltq7nfzaRjV1wpLI/default/public/values?alt=json-in-script", 
-        // tell jQuey that we are expecting JSONP 
         type: 'get', 
+        // tell jQuey that we are expecting JSONP 
         dataType: "jsonp", 
-        //data:{ //the data being sent to the server with the request 
+        // get the data from the AJAX call and drill down into the info you want from it
         success: function(data){ 
+            // store in a variable the loction of the information you would like 
             var postList = data.feed.entry;
 
             // call function to pass object list to it 
             showPost(postList)
-    
         }, 
         error: function(){
             console.log("Get was unsuccessful")
@@ -60,9 +62,6 @@ function getTheInfo(){
 
 
 function showPost(postList){ 
-
-    var entirePost = ""; 
-
    
     var postBeg = "<p>"
     var postContent = ''
@@ -70,27 +69,25 @@ function showPost(postList){
 
     // loop through data to pull out specific pieces 
     for (var i = 0; i < postList.length; i++){
-        postContent += [
-        data.feed.entry[i].gsx$post.$t, 
-        data.feed.entry[i].gsx$timestamp.$t, 
-        data.feed.entry[i].gsx$title.$t, 
-        ].join(); 
+        postContent += 
+        postBeg +
+        postList[i].gsx$timestamp.$t + "<br>" + 
+        postList[i].gsx$title.$t + "<br>" + 
+        postList[i].gsx$post.$t 
+        +
+        postEnd;
      // grab the id in the HTML - where we want the posts to go
-    document.getElementById("posts").innerHTML = postBeg + postContent + postEnd; 
+    document.getElementById("posts").innerHTML = postContent; 
+
+    console.log(postList, "Get was successful"); 
 
     }
 
-
-    console.log(postList, "Get was successful")
-
-
+}; 
 
 window.getTheInfo(); 
 
 
-// Step2: Getting the (XML) data posts/Build CSS/HTML (AJAX)
 
-// 
-// }
 
-// Step3: POSTing the posts (XML) 
+
