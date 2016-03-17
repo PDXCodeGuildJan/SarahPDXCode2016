@@ -11,28 +11,46 @@
 
 //-----------------------------------------------------------------------//
 
-
-
-// Step 1: Adding to spreadsheet aka post to the spreadsheet 
-    // GETting the data from speadsheet into console.log 
-    // Post hard coded Javascript to spreadsheet 
-
 //trigger when submit button is clicked...
 var submit = document.getElementById("submit"); 
 submit.addEventListener("click", getBoxInfo)
 
 
-// Function that grabs the information from the title and text box
+// Function that grabs the information from the title and post box
 function getBoxInfo (event){ 
 
     //prevent it from autosubmitting form 
     event.preventDefault(); 
 
-    //get the data value out of the form fields 
+    //get the data value out of the form fields, store in variable 
     var titleBox = document.getElementById("title").value; 
-    var textBox = document.getElementById("post").value; 
+    var postBox = document.getElementById("post").value; 
         console.log(titleBox); 
-        console.log(textBox); 
+        console.log(postBox); 
+
+    // call function to pass object list to it 
+    postTheInfo(titleBox, postBox)
+}
+
+// post the data to the spreadsheet 
+function postTheInfo(title, bodytext){
+ 
+    $.ajax({
+        url: "https://docs.google.com/forms/d/1W1jO8DwInFuzlabeYqEp6hUUUqDbR8gESs1Pk6qozOc/formResponse", 
+        data: {
+                "entry.1639809944" : title, 
+                "entry.1402022725" : bodytext
+            },
+        type: "POST",
+        dataType: "xml",
+        //We expect an error code 0 because of some google docs specifics.
+        success: function(data){
+        },
+        error: function(){
+            getTheInfo()
+            console.log("You posted"); 
+        }
+    })
 }
 
 
@@ -54,13 +72,13 @@ function getTheInfo(){
             showPost(postList)
         }, 
         error: function(){
-            console.log("Get was unsuccessful")
+            alert("Getting the Post from Google Spreadsheet was unsuccessful")
         }
     }); 
 
 }
 
-
+// this function will show the post on the website 
 function showPost(postList){ 
    
     var postBeg = "<p>"
@@ -78,8 +96,6 @@ function showPost(postList){
         postEnd;
      // grab the id in the HTML - where we want the posts to go
     document.getElementById("posts").innerHTML = postContent; 
-
-    console.log(postList, "Get was successful"); 
 
     }
 
