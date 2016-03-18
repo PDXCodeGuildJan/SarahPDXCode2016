@@ -6,9 +6,10 @@ body {
 
 }
 
-header {
+.forum-title {
     font-size: 2em;
     margin: 10px 0;
+    text-align: center; 
 
 
 }
@@ -18,4 +19,14 @@ header {
     margin: 10px; 
     border: 2px; 
 
+}
+
+
+.character {
+    display: inline-block;
+
+}
+
+.why {
+    display: inline-block;
 }
