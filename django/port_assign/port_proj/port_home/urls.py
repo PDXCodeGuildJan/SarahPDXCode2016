@@ -5,7 +5,7 @@ from .views import *
 urlpatterns = [
 
     #no need to say views.port_home because of the 'import *' above
-    url(r'^$', port_home), 
+    url(r'^$', port_home, name='port_home'), 
 
 
     # url(r'^myfriend', hello)
