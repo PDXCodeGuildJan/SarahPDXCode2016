@@ -1,16 +1,51 @@
 <!DOCTYPE html> 
 <head> 
-    <title>Star Wars Forum</title> 
-    <link rel="stylesheet" href="css/style.css"/>
+    <title>May the Forum Be With You</title> 
+    <link rel="stylesheet" type="text/css" href="./css/forum.css"/>
+
 </head> 
 
 <body> 
-<main> 
-    <header> May the Forum Be With You </header> 
+    <main> 
+        <header> </header> 
+            
+            <form class="post-info" id="form" noValidate>
+
+                <h1 class="forum-title"><marquee>May the Forum Be With You </marquee></h1>
+
+                <div class="image">
+                </div> 
+
+                <div class="character"> 
+                Who is your favorite Star Wars character?:
+                
+                <input type="text" id="title" <placevalue="What is your favorite Star Wars character?"/>
+               
+                </div> 
+                 <br> 
+                 <br>
+                
+                <div class="why"> 
+                Why?:
+                    <input type="text" id="post" <value="Why?"/>
+                    <input type="submit" id="submit" value ="Tell People!"/>
+                </div>
+
+                <div class="posts" id="posts">
 
 
-    <script> src="js/forum.js"></script> 
+                </div> 
+                <footer>
+                    <a href="http://www.starwars.com/">This forum theme is brought to you by Star Wars</a>
+                    
+                </footer>
 
-<main> 
+                
+            </form>
+           
+    </main> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/forum.js"></script> 
 </body> 
 </html> 

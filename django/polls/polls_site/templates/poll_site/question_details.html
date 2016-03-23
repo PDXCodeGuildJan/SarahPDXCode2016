@@ -1,26 +1,25 @@
-{% extends 'poll_site/base_templates.html' %}
+{% extends 'poll_site/base_template.html' %}
 
 {% load staticfiles %}
 
 {% block main_content %}
 
-    <h1>{{ question.question_text }}</h1>
+   <h1>{{ question.question_text }}</h1>
 
-    <div>
-        <form enctype="multipart/form-data" method="post" id="question_vote"> 
-            {% for choice in question.choice_set.all %}
-                <input type="radio" name="question_choice" value="{{chioce.id}}">
-                {{ choice.choice_text}}
+   <div id="question_things">
+      <form id="question_vote" submit="submit_vote">
+         {% csrf_token %}
+         {% for choice in question.choice_set.all %}
+            <input type="radio" name="question_choice" value="{{ choice.id }}" />
+               {{ choice.choice_text }}
+            <br/>
+         {% endfor %}
 
-                <br>
-            {% endfor %}
+         <input type="hidden" id="question_id" value="{{ question.id }}" />
+         <input type="submit"/>
+      </form>
+   </div>
 
-            <input type="hidden" id="question_id" value="{{ question.id }}" />
-
-            <input type="submit" /> 
-        </form> 
-    </div>  
-
-    <script src="{% static 'poll_site/voting.js' %}"></script>     
-
+   <script src="{% static 'poll_site/voting.js' %}"></script>
+ 
 {% endblock %}
