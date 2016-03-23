@@ -17,8 +17,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from zen_garden import urls as zen_garden_urls
+from zen_garden.views import * 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('port_home.urls')),
+    url(r'^zen_garden/', include(zen_garden_urls)), 
     #url(r'^javapic/', include('port_home.urls'))
 ]

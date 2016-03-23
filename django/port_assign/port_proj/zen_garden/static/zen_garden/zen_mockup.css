@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Nova+Square);
+
+
+.page-wrapper{
+	width: 90%;
+	padding:40px 0;
+	margin: 0 auto;
+}
+
+html {
+	background-color:rgb(238,238,238);
+}
+
+h1, h2, h3 {
+
+	font-family: 'Nova Square', cursive;
+	font-style: bold;
+	font-weight: 900;
+}
+
+h1 {
+
+	font-size: 3em;
+	color:rgb(226,48,69);
+	width:80%;
+}
+
+h2{
+	border-style: solid;
+	padding:1px;
+	border-color:rgb(226,48,69);
+	background-color: rgb(226,48,69);
+	color:#FFF6E0;
+	width: 98%; 
+	border-radius: 2px;
+}
+
+.intro {
+	max-width: 80%;
+	min-width: 300px
+}
+
+.resources {
+	display: none;
+}
+
+.main{
+	width:40%;
+	display: inline-block;
+	min-width: 300px; 
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.preamble {
+	border-style: hidden;
+	padding: 15px;
+	width: 95%;
+	background-color: rgb(27,69,73);
+	color: rgb(225,246,224);
+	margin-bottom: 40px;
+	box-shadow: 30px 30px 0px 2px rgb(122,179,176);
+	border-radius: 2px;
+
+}
+
+.explanation, .participation {
+	border-style: solid;
+	background-color:#FFF6E0;
+	border-width:1px;
+	padding:10px;
+	margin: 15px 0px 18px 0px;
+	box-shadow: 30px 45px 0px 4px rgb(122,179,176);
+	border-radius: 2px;
+}
+
+.participation a{
+	color:rgb(226,48,69);
+}
+
+.participation{
+	margin-bottom: 70px;
+}
+
+
+footer a{
+	color:#FFFFFF;
+	width:20%;
+	background-color: rgb(144,134,115);
+	box-shadow: 7px 10px rgb(216,207,188);
+	text-align: right;
+	margin-top: 80px;             
+	padding: 4px;
+	border-radius: 2px;
+}
+
+
+footer {
+	border-style:hidden;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: right;
+	border-radius: 2px;
+}
+
+
+li {
+	font-family: Arial, Helvetica, sans-serif;
+	color:rgb(245,149,129);
+	list-style-type: none;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+.sidebar{
+	display: inline-block;
+	vertical-align: top;
+	position:relative;
+	left: 50px; 
+}
+
+.zen-resources a{
+	color:#FFFFFF;
+}
+
+.view-css, .css-resources, .zen-faq, .zen-submit, .zen-translations{
+	border-style:hidden;
+	margin: 8px;
+	padding: 4px;
+	background-color: rgb(226,48,69);
+	box-shadow: 15px 10px 0px 1px rgb(245,149,129);
+	text-align: center;
+	display: list-item;
+	border-radius: 2px;
+	min-width: 250px; 
+	max-width: 300px; 	
+}
