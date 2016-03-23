@@ -20,9 +20,13 @@ from django.contrib import admin
 from zen_garden import urls as zen_garden_urls
 from zen_garden.views import * 
 
+from price_list import urls as price_list_urls 
+from price_list.views import *
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('port_home.urls')),
     url(r'^zen_garden/', include(zen_garden_urls)), 
-    #url(r'^javapic/', include('port_home.urls'))
+    url(r'^price_list/', include(price_list_urls)), 
+    
 ]
