@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'port_home', 
     'zen_garden', 
-    'price_list'
+    'price_list', 
+    'forum', 
 ]
 
 MIDDLEWARE_CLASSES = [

@@ -1,0 +1,42 @@
+body {
+    background-color: black; 
+    font-family: Helvetica; 
+    color: white;
+    background-image: url("starbg.jpg");
+
+}
+
+.forum-title {
+    font-size: 4em;
+    margin: 10px 0;
+    text-align: center; 
+    color: #CDA857;
+
+}
+
+.posts {
+    padding: 10px;
+    margin: 10px; 
+    border: 2px; 
+
+
+}
+
+
+.character {
+    display: inline-block;
+
+}
+
+.why {
+    display: inline-block;
+   
+}
+
+footer {
+    font-family: Helvetica; 
+    color: white;
+    text-decoration: none; 
+    
+
+}
