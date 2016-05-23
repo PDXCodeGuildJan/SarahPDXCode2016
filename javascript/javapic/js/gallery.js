@@ -5,18 +5,18 @@
 window.addEventListener('load', showGalleryImgs); 
 
 // update the slogan to add a ", user_name", with the user's name
-document.getElementsByClassName("tagline")[0].innerHTML += ", " + localStorage.nameCheck 
+document.getElementsByClassName("tagline")[0].innerHTML += ", " + localStorage.nameCheck
 
 
 //loop through the image folder and display each image in the folder
 function showGalleryImgs(){
 
     // make empty lists to put the image strings in
-    var oneImage = ""; 
-    var allImages = ""; 
+    var oneImage = "";
+    var allImages = "";
 
     //grab the id from HTML where we want the images to go
-    var showGalleryImgs = document.getElementById("gallery"); 
+    var showGalleryImgs = document.getElementById("gallery");
 
     //<img src="images/pdxcg_01.jpg"/> 
         // final = front + middle + end 
@@ -26,9 +26,9 @@ function showGalleryImgs(){
     //element before and after each img string. 
     //This can be done with other HTML elements, esentially a whole 
     //webpage can be built in these strings (Pg 223)
-    var imageStrBeg = "<li><img src='images/pdxcg_"; 
+    var imageStrBeg = "<li><img src='images/pdxcg_";
     //no need to indictae the middle string, we do so below
-    var imageStrEnd = ".jpg'/></li>"; 
+    var imageStrEnd = ".jpg'/></li>";
 
     //iterate through each photo number 
     // loop through each image and put each new one in a new string 
@@ -57,15 +57,17 @@ function showGalleryImgs(){
     showGalleryImgs.innerHTML = allImages
 }; 
     
+
+
 // when the lightbox is up, is the user clicks anywhere not on the image, 
 //the lightbox closes:
 // Step 1: make an onlickevent - if click anywhere on page, it changes 
 //the class = 'display-none' to "display-img'
-function lightBox(event){ 
+function lightBox(event){
     //event is like self, specific to this function only 
     //alert("This is for the lightBox function!")
 
-   // if click on the photo, capture src of it, make that source the picture 
+   // if click on the photo, capture src of it
     var imageClick = event.target.src
 
     // if click anywhere between the photos, make nothing happen 
@@ -73,15 +75,15 @@ function lightBox(event){
 
    //grab the id from HTML, change class name 
        var imageShow = document.getElementById("image_show"); 
-       imageShow.className = "display_img"; 
+       imageShow.className = "display_img";
 
         // taking the element id's first child - img - change pic is the div 
         //changing the src to reflect the one that is being clicked on
-        imageShow.firstChild.src = imageClick
+        imageShow.firstChild.src = imageClick;
     }
 }
 
-document.addEventListener('click', lightBox); 
+document.addEventListener('click', lightBox);
 
 //If click outside photo, image disapears - class goes back to display none
 function closePhotoviewing(){ 

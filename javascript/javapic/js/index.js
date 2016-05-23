@@ -34,15 +34,15 @@ function rotateImages(){
     //it match file name
     } else if (i <= 9){
         // add 0 to the number 
-        i = "0" + i; 
-    }; 
+        i = "0" + i;
+    };
 
     //concatinate the string together to make the image number increment and 
     // hold into variable
     var singleImage = (imageStrBeg + i + imageStrEnd)
     //console.log(singleImage)
 
-    //change jumbo src to equal the concatinated equasion 
+    //change jumbo url to equal the concatinated equasion 
     jumbo.style.backgroundImage = singleImage
 
     //if i - the number of photo - is equal to 60, change it to equal one

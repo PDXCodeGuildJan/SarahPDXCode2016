@@ -1,16 +1,5 @@
 //"join us" popup that asks for user info 
 
-// form validation should have all fields marked "required" required, 
-//and all email fields should require and check for proper email syntax.
-
-// any validation errors should be presented clearly to the user so that 
-//they may correct them
-
-// on completion of the form, navigate the user to the gallery, 
-//passing their name to the page
-
-
-//--------------------------------------------------------------------//
 // add form validation that works in all major browsers 
 //(you'll need to deactivate browser validate to check this)
 function disableFormValidation(){ 
@@ -20,7 +9,9 @@ function disableFormValidation(){
 
 disableFormValidation(); 
 
-//function to check the name is correct, alert if name has less than 1 character
+// email fields should require and check for proper email syntax.
+//function to check the name is correct, 
+//alert if name has less than 1 character
 function personalName(){ 
 
     //grab the value they input in the name box 
@@ -39,11 +30,8 @@ function personalName(){
 
     }; 
 
-// testing to see if returns true or false:
-//document.onclick = function() {console.log("The personal name", personalName())}; 
-
 // function to check the user name input 
-// alert is userName isn't correct aka user doesn't any characters 
+// alert if userName isn't correct aka user doesn't any characters 
 function theUserName(){ 
 
     //Grab the value they put in for their username 
@@ -60,10 +48,7 @@ function theUserName(){
     }
     }; 
  
-// testing to see if returns true or false:
-//document.onclick = function() {console.log("The user name", theUserName())}; 
-
-//function to check to see if the email is correct - will return true to false. 
+//function to check to see if the email is correct - will return true or false. 
 function emailCheck(){
 
     //Grab the value they put in for their email. 
@@ -80,9 +65,6 @@ function emailCheck(){
     }
     }; 
 
-   // testing to see if returns true or false:
-   //document.onclick = function() {console.log("email check", emailCheck())}; 
-
 function verifyAllForSubmit(event){
 //function that ties all above functions together and runs if all are true. 
 //Redirects to gallery.html 
@@ -93,7 +75,7 @@ function verifyAllForSubmit(event){
     userNameVer = theUserName(); 
     emailCheckVer = emailCheck();  
 
-    // if all of the above is true, then send the button to... 
+    //passing their name to the page
     if (nameVer && userNameVer && emailCheckVer){
         window.location = "gallery.html"; 
     }
