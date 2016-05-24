@@ -16,13 +16,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-
-#Need to import polls_site.py world
-from polls_site.views import *
-from polls_site import urls as poll_urls
+from poll_site.views import *
+from poll_site import urls as poll_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', hello_world_render), 
-    url(r'^polls/', include(poll_urls)),
+    url(r'^$', hello_world_render, name='homepage'),
+    url(r'^polls/', include(poll_urls)),  
+
+
 ]
