@@ -8,35 +8,57 @@ body {
 
 .forum-title {
     font-size: 4em;
-    margin: 10px 0;
     text-align: center; 
     color: #CDA857;
+    border-bottom: solid; 
 
 }
 
-.posts {
-    padding: 10px;
-    margin: 10px; 
-    border: 2px; 
-
-
+.question {
+    width: 1185px; 
+    height: 50px; 
 }
 
 
 .character {
-    display: inline-block;
+    text-align: center; 
 
 }
 
 .why {
-    display: inline-block;
+    text-align: center; 
    
 }
 
-footer {
-    font-family: Helvetica; 
-    color: white;
-    text-decoration: none; 
-    
+.posts {
+    border-style: solid;    
+    padding: 1px;
+    margin: 5% 35%; 
+    text-align: center; 
+}
 
+a {
+    text-decoration: none; 
+    font-family: Helvetica; 
+    color: #CDA857;
+    text-align: center; 
+}
+
+#submit{
+    background-image: url("starbg.jpg");
+    font-weight: bold; 
+    font-family: Helvetica; 
+    border-style: solid; 
+    border-radius: 8px; 
+    font-size: 14px; 
+    color: #CDA857;
+    cursor:pointer;
+}
+
+h6 {
+    text-align: center; 
+    color: white;
+}
+h5 {
+    text-align: center; 
 }
