@@ -74,10 +74,10 @@ def hangperson():
 
 
 # Update the state of the game based on the user's guess.
-#
+
 # guess: a character guessed by the user
 # currentState: the current state of the word/game
-#
+
 # return currentState
 def updateState(guess, currentState, incorrect):
    global numWrong
@@ -153,17 +153,12 @@ def userGuess():
       else: 
          guess = input("You have typed more than one letter. Please guess again!")
 
-
    return guess
 
 
-#### DO NOT EDIT BELOW THIS LINE ##################
-
-# A helpful function to print the hangman.
-# DO NOT CHANGE
-#
 # state: current state of the word
 def printHangperson(state, incorrect):
+   """ This print the hang man person himself when chosen incorrectly """ 
    person = [" O "," | \n | ", "\| \n | ", "\|/\n | ", "\|/\n | \n/  ", "\|/\n | \n/ \\"]
    print()
 

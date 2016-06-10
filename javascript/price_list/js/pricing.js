@@ -69,11 +69,8 @@ function removeStock(){
 
 function addItem() {
     // assigning a variable to catch the input from html 
-    // "name" is the elemtent ID name in the html 
     var materialName = document.getElementById("name").value; 
-    // console.log("Inside addItem function");      - printing in JS, a reference to the object in the browser
     var price = document.getElementById("price").value; 
-    //console.log(price); 
     var inStock = document.getElementById("in-stock").checked; // if checked it returns true 
     //console.log(inStock); 
 
@@ -119,7 +116,6 @@ function deleteItem(){
 
 
 // a helper function to get all the checked boxes in the HTML's inventory
-// aka previously written code
 function getSelectedRowBoxes(){
     var removeBox = document.querySelectorAll("input:checked:not(#in-stock)"); 
     return removeBox; 

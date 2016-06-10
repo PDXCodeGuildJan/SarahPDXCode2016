@@ -15,9 +15,6 @@ class MasterMind:
 	def __init__(self):
 		self.model = MasterModel()
 		self.view = MasterView()
-		
-
-
 
 	def generate_goal(self):
 		"""create 4 randomly generated colored pegs to establish the goal of the game."""#need to return to fix use of peg colors
@@ -29,15 +26,11 @@ class MasterMind:
 			goal.append(player_peg)
 
 		self.model.goal = goal 
-		
-
-
 
 	def play_game(self):
 		"""plays the mastermind game"""
 
 		self.model.guess_num = 10
-
 
 		#Show the game rules and objectives
 		self.view.show_rules()
@@ -170,38 +163,33 @@ class MasterMind:
 						 	goal.pop(k)
 						 	goal.insert(k, "")
 
-						 	break #we want to stop going through the loop once we find one to avoid dups, not continue  
+						 	break
 
 		#we need to store peg list with the history of guesses
 		self.model.current_guess.key_pegs = peg_list
 
-		#print(len(peg_list)) #Need to get rid of this eventually 
+# def test_eval_peg_color():
+# 	test_instance = MasterMind() #new object of the game
+# 	test_instance.generate_goal() #generated a goal 
+# 	for peg in test_instance.model.goal:
+# 		print(peg)
+# 	test_instance.store_player_pegs() #prompts for the guess 
+
+# 	test_instance.eval_peg_color()
 
 
+# def test():
+# 	#testing the random color generator
+# 	test_object = MasterMind()
+# 	temp_list = test_object.generate_goal()
+# 	for peg in temp_list:
+# 		print(peg.color)
 
 
-def test_eval_peg_color():
-	test_instance = MasterMind() #new object of the game
-	test_instance.generate_goal() #generated a goal 
-	for peg in test_instance.model.goal:
-		print(peg)
-	test_instance.store_player_pegs() #prompts for the guess 
+# def main():
 
-	test_instance.eval_peg_color()
-
-
-def test():
-	#testing the random color generator
-	test_object = MasterMind()
-	temp_list = test_object.generate_goal()
-	for peg in temp_list:
-		print(peg.color)
-
-
-def main():
-
-	test_object = MasterMind()
-	test_object.play_game()
+# 	test_object = MasterMind()
+# 	test_object.play_game()
 
 if __name__ == '__main__':
 	main()
