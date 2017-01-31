@@ -20,3 +20,6 @@ The photo gallery project has a landing page that has a rotating background imag
 - gallery.html
 - css/style.css
 - images/(pdxcg_01.jpg - pdxcg_60.jpg)
+- gallery.js
+- index.js
+- join.js
